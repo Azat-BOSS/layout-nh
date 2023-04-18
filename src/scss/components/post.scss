@@ -1,0 +1,115 @@
+.post {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 5rem;
+
+    background-color: var(--gray-color);
+    border-radius: 2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    gap: 3.6rem;
+    padding: 4rem;
+  }
+
+  @include breakpoint(mobile) {
+    gap: 3.2rem;
+    padding: 2rem;
+  }
+
+  &__content {
+    padding: 7.5rem 8rem;
+
+    background-color: var(--gray-color);
+    border-radius: 2rem;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+
+  &__title {
+    font: var(--title-h2);
+
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2.8rem;
+    }
+
+    span {
+      opacity: 0.2;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    overflow-y: auto;
+    max-height: 46.9rem;
+
+    font: var(--text-t2);
+    line-height: 130%;
+
+    @include breakpoint(tablet) {
+      max-height: 35rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.8rem;
+      max-height: 27rem;
+
+      font-size: 1.4rem;
+      line-height: 120%;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    min-height: 50rem;
+
+    border-radius: 2rem;
+    background-color: var(--gray-color);
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      min-height: 45rem;
+      order: -1;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 35rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 26.2rem;
+    }
+
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+
+      border-radius: 2rem;
+    }
+  }
+}

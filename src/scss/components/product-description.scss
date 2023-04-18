@@ -1,0 +1,41 @@
+.product-description {
+  padding-bottom: 14rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
+  &__title {
+    margin-bottom: 2.8rem;
+
+    font: var(--other-2);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__more-button {
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: block;
+      margin-top: 2.4rem;
+
+      font: var(--text-t2);
+      font-size: 1.6rem;
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+  }
+}

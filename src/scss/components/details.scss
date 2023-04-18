@@ -1,0 +1,184 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  min-height: 53.5rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+
+  @include breakpoint(tablet) {
+    min-height: auto;
+  }
+
+  &__content {
+    padding: 7.2rem 7.2rem 4rem;
+
+    @include breakpoint(tablet) {
+      padding: 5.6rem 5.6rem 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 5rem 5rem 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 4rem 3.6rem 4rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4.2rem;
+    font: var(--title-h3);
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-bottom: 1.6rem;
+    margin-bottom: 2.5rem;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+      padding-bottom: 1.8rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    font: var(--text-t2);
+  }
+
+  &__item-value--red {
+    color: var(--system-color);
+  }
+
+  &__result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+
+    font: var(--title-h4);
+  }
+
+  &__deliver {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 2.4rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.2rem;
+
+    background-color: var(--gray-color);
+    border-radius: 1.2rem;
+
+    font: var(--text-t3);
+
+    span {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  &__deliver-indicator {
+    position: relative;
+
+    width: 12rem;
+    height: 0.2rem;
+
+    border-radius: 99.9rem;
+    background-color: #E6E6E6;
+    overflow: hidden;
+
+    @media (max-width: 500px) {
+      width: 4.5rem;
+    }
+  }
+
+  &__deliver-indicator-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 40%;
+
+    background-color: var(--primary-color);
+  }
+
+  &__link {
+    width: 100%;
+    height: 5.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__modal-link {
+    display: block;
+    width: 100%;
+
+    font: var(--text-t2);
+    text-align: center;
+  }
+
+  &__promo-code {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    height: 5.2rem;
+    margin-top: auto;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  &__promo-code-input {
+    width: 100%;
+    max-width: 32.5rem;
+    height: 100%;
+    padding: 0 2.4rem;
+
+
+    font: var(--regular) 1.6rem/100% var(--main-ff);
+
+    @include breakpoint(tablet) {
+      max-width: none;
+      margin-right: 13rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 0 1.6rem;
+    }
+
+    @include placeholder() {
+      font: var(--regular) 1.6rem/100% var(--main-ff);
+      color: var(--black-color);
+    }
+  }
+
+  &__promo-code-button {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 0 1.2rem;
+    height: 2.6rem;
+
+    font-size: 1.4rem;
+  }
+}

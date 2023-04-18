@@ -1,0 +1,213 @@
+.about-intro {
+  padding-bottom: 2rem;
+
+  opacity: 0;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 1.6rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.4rem 3.2rem 11.2rem;
+    min-height: 76.7rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+    background-size: cover;
+
+    color: #fff;
+
+    @include breakpoint(tablet) {
+      padding: 2.4rem 2.4rem 8rem;
+      min-height: 60rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem 2.4rem 6rem;
+      min-height: 50rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem 2rem 4.8rem;
+      min-height: 46.7rem;
+
+      border-radius: 1.4rem;
+    }
+  }
+
+  .breadcrumbs {
+    align-self: flex-start;
+    margin-bottom: 10.8rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4.7rem;
+    }
+    
+    &__item::after {
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+    
+    font: var(--title-h0);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 49rem;
+    margin-bottom: 3rem;
+
+    font: var(--text-t1);
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      max-width: 40rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      max-width: 35rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 28rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+
+    cursor: pointer;
+
+    &:hover {
+      .about-intro__video-button-round {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__video-button {
+    position: relative;
+    margin-bottom: 4.4rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.4rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 14.8rem;
+      height: 14.8rem;
+
+      background: url("../img/video-link-bg.png") no-repeat center;
+      background-size: contain;
+
+      animation-name: rotationIntroButton;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+
+      @include breakpoint(tablet) {
+        width: 13.2rem;
+        height: 13.2rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 11.1rem;
+        height: 11.1rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+
+    @keyframes rotationIntroButton {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    svg {
+      width: 2.2rem;
+      height: 2.2rem;
+      fill: var(--black-color);
+    }
+  }
+
+  &__video-button-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.2rem;
+    height: 10.2rem;
+
+    border-radius: 50%;
+    background-color: #fff;
+
+    color: var(--black-color);
+
+    transition: transform 0.3s;
+
+    @include breakpoint(tablet) {
+      width: 9.5rem;
+      height: 9.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 8.4rem;
+      height: 8.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 7.3rem;
+      height: 7.3rem;
+    }
+  }
+
+  &__video-desc {
+    display: block;
+    max-width: 12rem;
+
+    font: var(--text-t2);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      max-width: 9.5rem;
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="basket-empty js-section-animate">
+            <div class="container">
+                <div class="basket-empty__wrapper">
+                    <h1 class="basket-empty__title">Ваша корзина пуста</h1>
+                    <p class="basket-empty__desc">Добавьте в корзину товары из каталога или выберите товары из нашей подборки популярных товаров.</p>
+                    <a class="basket-empty__link button button--black" href="catalog.html">В каталог</a>
+                </div>
+            </div>
+        </section>
+        {{> basket-popular }}
+
+    {{/content}}
+{{/extend}}

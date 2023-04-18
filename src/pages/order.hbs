@@ -1,0 +1,193 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="order">
+            <div class="container">
+                <div class="order__title-wrapper">
+                    <h1 class="order__title js-title-animate">Оформление заказа</h1>
+                </div>
+                <div class="order__wrapper js-section-animate">
+                    <div class="order__content">
+                        <div class="order__tabs-block">
+                            <h2 class="order__tabs-title">Способ доставки</h2>
+                            <div class="order__tabs js-order-tabs">
+                                {{#each tabs }}
+                                    <button class="order__tab js-order-tab{{#if active }} active{{/if}}" data-href="orderTab{{this.id}}">
+                                        <div class="order__tab-header">
+                                            <h3 class="order__tab-title">{{this.title}}</h3>
+                                            <svg class="order__tab-icon">
+                                                <use xlink:href="#{{this.svg}}"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="order__tab-desc">{{{this.desc}}}</span>
+                                    </button>
+                                {{/each}}
+                            </div>
+                            <div class="order__tabs-contents">
+                                <div class="order__tabs-content js-order-tab-content active" data-id="orderTab1">
+                                    <h3 class="order__tabs-subtitle">Данные доставки</h3>
+                                    <form class="order__deliver" action="#">
+                                        <div class="order__deliver-input-wrapper input-wrapper">
+                                            <input class="order__deliver-input input input--white" type="text" name="orderDeliverAddress" id="orderDeliverAddress" required>
+                                            <label class="order__deliver-label" for="orderDeliverAddress">Адрес доставки</label>
+                                        </div>
+                                        <div class="order__deliver-datepicker js-datepicker-container">
+                                            <input class="order__deliver-datepicker-input js-datepicker" type="text">
+                                        </div>
+                                        <div class="order__deliver-datepicker js-datepicker-container">
+                                            <input class="order__deliver-datepicker-input js-datepicker-time" type="text">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="order__tabs-content js-order-tab-content" data-id="orderTab2">
+                                    <div class="map-navigation">
+                                        <div class="map-navigation__map-block">
+                                            <div class="map-navigation__map js-pickup-map js-map" id="map" data-marker="../img/placemark.svg" data-zoom="15" data-coordinates="55.83358447926472,49.040342224536886"></div>
+                                            <button class="map-navigation__map-button button button--fill-white js-map-show">Смотреть на карте</button>
+                                        </div>
+                                        <div class="order__pickup-info">
+                                            <div class="order__pickup-info-item">
+                                                <h3 class="order__pickup-info-title">Вы можете забрать товар по адресу:</h3>
+                                                <address class="order__pickup-info-address">ул. Восстания 100 к5050, Казань</address>
+                                            </div>
+                                            <div class="order__pickup-info-item">
+                                                <h3 class="order__pickup-info-title">Часы работы</h3>
+                                                <ul class="order__pickup-schedule">
+                                                    {{# each pickupSchedule }}
+                                                        <li class="order__pickup-schedule-item">
+                                                            <span class="order__pickup-schedule-day">{{this.day}}</span>
+                                                            <span class="order__pickup-schedule-time">{{this.time}}</span>
+                                                        </li>
+                                                    {{/each}}
+                                                </ul>
+                                            </div>
+                                            <div class="order__pickup-info-item">
+                                                <h3 class="order__pickup-info-title">Телефон</h3>
+                                                <a class="order__pickup-phone link" href="tel:88001015923">8 800 101–59–23</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="order__pickup-subtitle">Вы можете выбрать дату и время. И мы упакуем заказ точно в срок</h3>
+                                    <form class="order__pickup-form" action="#">
+                                        <div class="order__pickup-datepicker js-datepicker-container">
+                                            <input class="order__pickup-datepicker-input js-datepicker" type="text">
+                                        </div>
+                                        <div class="order__pickup-datepicker js-datepicker-container">
+                                            <input class="order__deliver-datepicker-input js-datepicker-time" type="text">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="order__tabs-content js-order-tab-content" data-id="orderTab3">
+                                    <div class="map-navigation">
+                                        <div class="map-navigation__map-block">
+                                            <div class="map-navigation__map js-map js-none-map"></div>
+                                            <button class="map-navigation__map-button button button--fill-white js-map-show">Смотреть на карте</button>
+                                        </div>
+                                        <div class="map-navigation__content">
+                                            <!--<p class="order__tabs-content-desc">
+                                                  Выберите на карте пункт выдачи CDEK
+                                                </p>-->
+                                            <div class="map-navigation__info">
+                                                <div class="map-navigation__info-item">
+                                                    <h3 class="map-navigation__info-title">Адрес выбранного пункта выдачи</h3>
+                                                    <address class="map-navigation__info-address">Чистопольская ул., 26/5, Казань</address>
+                                                </div>
+                                                <div class="map-navigation__info-item">
+                                                    <h3 class="map-navigation__info-title">Часы работы</h3>
+                                                    <ul class="map-navigation__schedule">
+                                                        {{#each cdekSchedule }}
+                                                            <li class="map-navigation__schedule-item">
+                                                                <span class="map-navigation__schedule-day">{{this.day}}</span>
+                                                                <span class="map-navigation__schedule-time">{{this.time}}</span>
+                                                            </li>
+                                                        {{/each}}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__tabs-content js-order-tab-content" data-id="orderTab4">
+                                    <div class="map-navigation">
+                                        <div class="map-navigation__map-block">
+                                            <div class="map-navigation__map js-map js-none-map"></div>
+                                            <button class="map-navigation__map-button button button--fill-white js-map-show">Смотреть на карте</button>
+                                        </div>
+                                        <div class="map-navigation__content">
+                                            <!--<p class="order__tabs-content-desc">
+                                                  Выберите на карте пункт выдачи CDEK
+                                                </p>-->
+                                            <div class="map-navigation__info">
+                                                <div class="map-navigation__info-item">
+                                                    <h3 class="map-navigation__info-title">Адрес выбранного пункта выдачи</h3>
+                                                    <address class="map-navigation__info-address">Чистопольская ул., 26/5, Казань</address>
+                                                </div>
+                                                <div class="map-navigation__info-item">
+                                                    <h3 class="map-navigation__info-title">Часы работы</h3>
+                                                    <ul class="map-navigation__schedule">
+                                                        {{#each cdekSchedule }}
+                                                            <li class="map-navigation__schedule-item">
+                                                                <span class="map-navigation__schedule-day">{{this.day}}</span>
+                                                                <span class="map-navigation__schedule-time">{{this.time}}</span>
+                                                            </li>
+                                                        {{/each}}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__client">
+                            <h2 class="order__client-title">Данные получателя заказа</h2>
+                            <form class="order__client-form" data-need-validation="true" action="#">
+                                <div class="order__client-input-wrapper input-wrapper">
+                                    <input class="order__client-input input input--white" type="text" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim" name="clientSurname" id="clientSurname" required>
+                                    <label class="order__client-label" for="clientSurname">Фамилия</label>
+                                </div>
+                                <div class="order__client-input-wrapper input-wrapper">
+                                    <input class="order__client-input input input--white" type="text" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim" name="clientName" id="clientName" required>
+                                    <label class="order__client-label" for="clientName">Имя</label>
+                                </div>
+                                <div class="order__client-input-wrapper input-wrapper">
+                                    <input class="order__client-input input input--white" type="text" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim" name="clientPatronymic" id="clientPatronymic" required>
+                                    <label class="order__client-label" for="clientPatronymic">Отчество</label>
+                                </div>
+                                <div class="order__client-input-wrapper input-wrapper order__client-input-wrapper--long">
+                                    <input class="order__client-input input input--white js-phone-input" type="tel" name="clientPhone" id="clientPhone" required>
+                                    <label class="order__client-label" for="clientPhone">Телефон</label>
+                                </div>
+                                <div class="order__client-input-wrapper input-wrapper order__client-input-wrapper--long">
+                                    <input class="order__client-input input input--white" data-parsley-excluded="true" type="email" name="clientEmail" id="clientEmail" required>
+                                    <label class="order__client-label" for="clientEmail">Email</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="order__payment">
+                            <h2 class="order__payment-title">Способ оплаты</h2>
+                            <div class="order__payment-list">
+                                {{#each payment }}
+                                    <button class="order__payment-item{{#if active }} active{{/if}} js-payment">
+                                        <h3 class="order__payment-item-title">{{this.title}}</h3>
+                                        <span class="order__payment-item-desc">{{this.desc}}</span>
+                                    </button>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="order__button-block">
+                            <button class="order__button button button--green">Оплатить</button>
+                            <p class="order__confidence">
+                                Нажимая кнопку «Оплатить» вы соглашаетесь с <a href="#">договором — офертой</a> и с
+                                <a href="#">политикой обработки персональных данных</a>
+                            </p>
+                        </div>
+                    </div>
+                    {{> details buttonText='Оплатить' }}
+                </div>
+            </div>
+        </section>
+        {{> basket-popular }}
+
+    {{/content}}
+{{/extend}}

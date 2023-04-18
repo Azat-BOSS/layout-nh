@@ -1,0 +1,119 @@
+.catalog-search {
+  padding: 2rem 0 10rem;
+
+  @include breakpoint(tablet) {
+    padding: 1.6rem 0 7.5rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 1.2rem 0 7rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0.8rem 0 6rem;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 5.8rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title-wrapper {
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  &__title {
+    opacity: 0;
+
+    font: var(--title-h1);
+    text-align: center;
+  }
+
+  &__desc-wrapper {
+    margin-bottom: 8rem;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 7rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__desc {
+    display: inline-block;
+
+    opacity: 0;
+
+    font: var(--text-t2);
+    color: rgba(28, 28, 28, 0.3);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      font: var(--text-t3);
+    }
+  }
+
+  .catalog-filter {
+    margin-bottom: 2.8rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .catalog-list {
+    margin-bottom: 6rem;
+    opacity: 0;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
+  }
+}

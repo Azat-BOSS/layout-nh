@@ -1,0 +1,117 @@
+<div class="header fix-blocks">
+    <div class="container">
+        <nav class="header__nav js-section-animate" data-delay="0.2">
+            <div class="header__burger">
+                <svg>
+                    <use xlink:href="#burger-icon"></use>
+                </svg>
+            </div>
+            <a class="header__logo link" aria-label="Логотип" href="index.html">
+                <svg>
+                    <use xlink:href="#logo"></use>
+                </svg>
+            </a>
+            <div class="header__catalog-links">
+                <a class="header__catalog-link button button--bordered" href="catalog.html">
+                    <svg>
+                        <use xlink:href="#button-icon"></use>
+                        <span>Каталог</span>
+                    </svg>
+                </a>
+                <a class="header__promotion-link link" href="catalog.html">Акции</a>
+            </div>
+            <ul class="header__menu">
+                {{#each menu }}
+                    <li class="header__menu-item">
+                        <a class="header__menu-link link" href="{{this.link}}">{{this.text}}</a>
+                    </li>
+                {{/each}}
+            </ul>
+            <a class="header__phone link" href="tel:8800999348000">8 800 101 59 23</a>
+            <div class="header__user-navigation">
+                <button class="header__user-search link js-search-button" aria-label="Поиск по сайту">
+                    <svg>
+                        <use xlink:href="#search-icon"></use>
+                    </svg>
+                </button>
+                <a class="header__user-basket link" aria-label="Корзина" href="backet.html">
+                    <svg>
+                        <use xlink:href="#backet-icon"></use>
+                    </svg>
+                    <span class="header__user-basket-count">1</span>
+                </a>
+            </div>
+            <div class="header__search-block js-search">
+                <div class="header__search-wrapper">
+                    <form class="header__search-form" action="#">
+                        <input class="header__search-input js-search-input" type="text" name="search" id="search" placeholder="Введите запрос">
+                        <button class="header__search-button" aria-label="Начать поиск">
+                            <svg>
+                                <use xlink:href="#search-icon"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="header__search-result">
+                        <div class="header__search-content js-search-recommend">
+                            <h3 class="header__search-title">Чаще всего ищут</h3>
+                            <div class="header__search-tags-slider swiper js-init-slider" data-slides="auto" data-spaces="100:8,641:4">
+                                <ul class="header__search-tags swiper-wrapper">
+                                    {{#each searchTags }}
+                                        <li class="header__search-tag swiper-slide">
+                                            <a class="header__search-tag-link" href="catalog-search.html">{{this.text}}</a>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-content js-search-result">
+                            <h3 class="header__search-title">Найдено 13 товаров</h3>
+                            {{> catalog-list mod='catalog-list--search' data=searchCatalog }}
+                            <a class="header__search-link button button--black" href="catalog-search.html">Смотреть все</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <nav class="header__burger-nav">
+        <div class="header__burger-close">
+            <svg>
+                <use xlink:href="#burger-close-icon"></use>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="header__burger-nav-wrapper">
+                <a class="header__burger-logo link" aria-label="Бургер" href="index.html">
+                    <svg>
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <ul class="header__burger-menu">
+                    {{#each burgerMenu }}
+                        <li class="header__burger-item">
+                            <a class="header__burger-link link" href="{{this.link}}">
+                                {{this.text}}
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+                <a class="header__burger-mail link" href="mailto:info@nhstar.ru">info@nhstar.ru</a>
+                <div class="header__burger-bottom">
+                    <a class="header__burger-phone link" href="tel:8800999348000">8 800 999 348 000</a>
+                    <ul class="header__burger-socials">
+                        {{#each socials }}
+                            <li class="header__burger-social">
+                                <a class="header__burger-social-link" aria-label="Социальная сеть" href="#">
+                                    <svg>
+                                        <use xlink:href="#{{this.svg}}"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

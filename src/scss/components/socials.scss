@@ -1,0 +1,44 @@
+.socials {
+  display: flex;
+  gap: 1.5rem;
+
+  @include breakpoint(tablet) {
+    gap: 1rem;
+  }
+
+  svg {
+    width: 3.2rem;
+    height: 3.2rem;
+
+    border: 1px solid var(--accent-color);
+    border-radius: 0.7rem;
+    background-color: var(--accent-color);
+
+    transition: 0.4s;
+
+    @include breakpoint(mobile) {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      .icon-bg {
+        fill: transparent;
+      }
+
+      .icon {
+        fill: var(--accent-color);
+      }
+    }
+
+    .icon-bg {
+      transition: 0.3s;
+    }
+
+    .icon {
+      transition: 0.3s;
+    }
+  }
+}

@@ -1,0 +1,654 @@
+.order {
+  padding: 9.2rem 0 12rem;
+
+  @include breakpoint(tablet) {
+    padding: 7rem 0 11.2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 5rem 0 10.2rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 2.8rem 0 9.2rem;
+  }
+
+  &__title-wrapper {
+    padding-bottom: 0.6rem;
+    margin-bottom: 7.4rem;
+
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__title {
+    font: var(--title-h1);
+    text-align: center;
+
+    opacity: 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: flex-start;
+    gap: 2rem;
+
+    opacity: 0;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
+  &__content {
+    grid-column: span 8;
+  }
+
+  .details {
+    grid-column: span 4;
+    min-height: 40.9rem;
+
+    @include breakpoint(tablet) {
+      min-height: auto;
+    }
+  }
+
+  &__tabs-block {
+    padding: 4.8rem 6rem 6rem;
+    margin-bottom: 2rem;
+
+    border-radius: 2rem;
+    background-color: var(--gray-color);
+
+    @include breakpoint(tablet) {
+      padding: 4.2rem 4.5rem 4.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3.6rem 3rem 3.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 3.2rem 2rem;
+      margin-bottom: 1.6rem;
+
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__tabs-title {
+    margin-bottom: 3.2rem;
+
+    font: var(--title-h3);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 4.8rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 4.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.6rem 1.9rem;
+    min-height: 10.6rem;
+
+    background-color: #fff;
+    border-radius: 1.2rem;
+
+    transition: 0.3s;
+
+    @include breakpoint(small-tablet) {
+      min-height: 6rem;
+      padding-right: 7.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.4rem;
+      min-height: auto;
+      padding: 1.2rem 2rem;
+      padding-right: 7.2rem;
+    }
+
+    &.active {
+      background-color: var(--black-color);
+      color: #fff;
+    }
+  }
+
+  &__tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+
+    svg {
+      flex-shrink: 0;
+      width: 4rem;
+      height: 2rem;
+      margin-top: 0.5rem;
+      object-fit: contain;
+
+      @include breakpoint(small-tablet) {
+        position: absolute;
+        top: 2.2rem;
+        right: 2rem;
+
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__tab-title {
+    font: var(--text-t1);
+    text-align: left;
+  }
+
+  &__tab-desc {
+    opacity: 0.4;
+
+    font: var(--text-t2);
+    text-align: left;
+  }
+
+  &__tabs-contents {
+    position: relative;
+  }
+
+  &__tabs-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    &.active {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__tabs-content-desc {
+    max-width: 20.3rem;
+    font: var(--title-h4);
+
+    @include breakpoint(mobile) {
+      max-width: 30.3rem;
+    }
+  }
+
+  &__tabs-subtitle {
+    margin-bottom: 0.8rem;
+    font: var(--text-t2);
+  }
+
+  &__deliver {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+    @include breakpoint(small-tablet) {
+        flex-direction: column;
+    }
+  }
+
+  &__deliver-input-wrapper {
+    flex-grow: 1;
+    max-width: 36.5rem;
+
+    border-radius: 0.6rem;
+    background-color: #fff;
+
+    @include breakpoint(small-tablet) {
+      max-width: none;
+    }
+  }
+
+  & .order__deliver-label {
+    left: 1.6rem;
+
+    opacity: 0.4;
+
+    font: var(--text-t2);
+
+    &.active {
+      opacity: 0.4;
+    }
+  }
+
+  &__deliver-datepicker {
+    position: relative;
+
+    flex-grow: 1;
+    max-width: 19rem;
+
+    border-radius: 0.6rem;
+    background-color: #fff;
+    overflow: hidden;
+
+    @include breakpoint(small-tablet) {
+      max-width: none;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      right: 1.6rem;
+
+      width: 1.6rem;
+      height: 1.6rem;
+
+      background: url("../img/icons/arrow-down-icon.svg") no-repeat center;
+      background-size: cover;
+
+      transition: 0.3s;
+    }
+
+    &.active::after {
+      transform: translateY(-50%) rotate(0);
+    }
+  }
+
+  &__deliver-datepicker-input {
+    display: flex;
+    align-items: center;
+    padding: 0 1.6rem;
+    padding-right: 4.2rem;
+    height: 5.2rem;
+
+    font: var(--text-t2);
+  }
+
+  &__pickup-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-self: center;
+
+    @include breakpoint(tablet) {
+      align-self: flex-start;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 100%;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+  }
+
+  &__pickup-info-title {
+    margin-bottom: 1.2rem;
+
+    font: var(--text-t2);
+    color: rgba(28, 28, 28, 0.3);
+  }
+
+  &__pickup-info-address {
+    font: var(--title-h4);
+  }
+
+  &__pickup-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  &__pickup-schedule-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    font: var(--text-t2);
+
+    @media (max-width: 360px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__pickup-phone {
+    font: var(--text-t2);
+  }
+
+  &__pickup-subtitle {
+    font: var(--text-t2);
+
+    margin-top: 4.4rem;
+    margin-bottom: 1.2rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 7.2rem;
+      margin-bottom: 2rem;
+
+      font-size: 2.4rem;
+    }
+  }
+
+  &__pickup-form {
+    display: flex;
+    gap: 0.8rem;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__pickup-datepicker {
+    position: relative;
+
+    flex-grow: 1;
+    max-width: 19rem;
+
+    border-radius: 0.6rem;
+    background-color: #fff;
+    overflow: hidden;
+
+    @include breakpoint(small-tablet) {
+      max-width: none;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      right: 1.6rem;
+
+      width: 1.6rem;
+      height: 1.6rem;
+
+      background: url("../img/icons/arrow-down-icon.svg") no-repeat center;
+      background-size: cover;
+
+      transition: 0.3s;
+    }
+
+    &.active::after {
+      transform: translateY(-50%) rotate(0);
+    }
+  }
+
+  &__pickup-datepicker-input {
+    display: flex;
+    align-items: center;
+    padding: 0 1.6rem;
+    padding-right: 4.2rem;
+    height: 5.2rem;
+
+    font: var(--text-t2);
+  }
+
+  &__client {
+    padding: 4.8rem 6rem 6rem;
+    margin-bottom: 2rem;
+
+    border-radius: 2rem;
+    background-color: var(--gray-color);
+
+    @include breakpoint(tablet) {
+      padding: 4.2rem 4.5rem 4.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3.6rem 3rem 3.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 3.2rem 2rem;
+      margin-bottom: 1.6rem;
+
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__client-title {
+    margin-bottom: 3.2rem;
+    font: var(--title-h3);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__client-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    max-width: 70.9rem;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      max-width: none;
+    }
+
+    .parsley-errors-list {
+      font-size: 1.2rem;
+      right: 1rem;
+    }
+  }
+
+  &__client-input-wrapper {
+    flex-grow: 1;
+    flex-basis: 20rem;
+    max-width: 21.6rem;
+
+    background-color: #fff;
+    border-radius: 0.6rem;
+    overflow: hidden;
+
+    @include breakpoint(small-tablet) {
+      max-width: none;
+      flex-basis: auto;
+    }
+
+    &--long {
+      max-width: 28rem;
+
+      @include breakpoint(small-tablet) {
+        max-width: none;
+      }
+    }
+  }
+
+  & .order__client-label {
+    left: 1.6rem;
+
+    opacity: 0.4;
+
+    font: var(--text-t2);
+
+    &.active {
+      opacity: 0.4;
+    }
+  }
+
+  &__payment {
+    padding: 4.8rem 6rem 6rem;
+    margin-bottom: 3.7rem;
+
+    border-radius: 2rem;
+    background-color: var(--gray-color);
+
+    @include breakpoint(tablet) {
+      padding: 4.2rem 4.5rem 4.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3.6rem 3rem 3.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 3.2rem 2rem;
+      margin-bottom: 1.6rem;
+
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__payment-title {
+    margin-bottom: 3.2rem;
+    font: var(--title-h3);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__payment-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__payment-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 1.6rem 1.9rem;
+    min-height: 10.6rem;
+
+    background-color: #fff;
+    border-radius: 1.2rem;
+
+    transition: 0.3s;
+
+    @include breakpoint(small-tablet) {
+      min-height: 6rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.4rem;
+      min-height: auto;
+      padding: 1.2rem 2rem;
+    }
+
+    &.active {
+      background-color: var(--black-color);
+      color: #fff;
+    }
+  }
+
+  &__payment-item-title {
+    font: var(--text-t1);
+    text-align: left;
+  }
+
+  &__payment-item-desc {
+    font: var(--text-t2);
+    text-align: left;
+    opacity: 0.4;
+  }
+
+  &__button-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__button {
+    height: 5.2rem;
+    margin-bottom: 2rem;
+
+    font: var(--text-t2);
+  }
+
+  &__confidence {
+    align-self: center;
+    max-width: 31.2rem;
+    
+    font: var(--text-t3);
+    text-align: center;
+    color: rgba(28, 28, 28, 0.3);
+    
+    a {
+      transition: 0.3s;
+      
+      &:hover {
+        color: var(--black-color);
+        text-decoration: underline;
+      }
+    }
+  }
+}

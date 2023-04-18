@@ -1,0 +1,104 @@
+<div class="loader">
+    <svg class="loader__img">
+        <use xlink:href="#logo"></use>
+    </svg>
+</div>
+
+<style>
+    .loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #fff;
+    }
+
+    .loader__img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: transform .6s ease, visibility 0s linear 1.2s;
+    }
+
+    @media (max-width: 640px) {
+        .loader__img {
+            width: 22rem;
+        }
+    }
+
+    .disable-scroll {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .animatable .loader {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .6s ease, visibility 0s linear 1.2s;
+    }
+
+    .animatable .loader__img {
+
+    }
+</style>
+
+<script>
+    function disableScroll() {
+        lockPadding();
+        document.body.classList.add('disable-scroll');
+    }
+
+    function enableScroll() {
+        unlockPadding();
+        document.body.classList.remove('disable-scroll');
+    }
+
+    function lockPadding() {
+        let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+        document.body.style.paddingRight = paddingOffset;
+    }
+
+    function unlockPadding() {
+        document.body.style.paddingRight = '0px';
+    }
+
+    disableScroll();
+
+    const timeout = setTimeout(() => {
+        document.body.classList.add('loader-hide');
+        enableScroll()
+    }, document.body.dataset.timer * 1 || 2000)
+
+    let loaderHided = false;
+
+    const attrObserver = new MutationObserver((mutations) => {
+        mutations.forEach(mu => {
+            if (mu.type !== "attributes" && mu.attributeName !== "class") return;
+            if (document.body.classList.contains('animatable')) {
+                if (loaderHided) return;
+                setTimeout(() => {
+                    window.initIntroSlider();
+                    window.initSectionAnimation();
+                    window.initTitleAnimation();
+                    enableScroll();
+                    loaderHided = true
+                }, 500);
+                clearInterval(timeout);
+            }
+        });
+    });
+
+    attrObserver.observe(document.body, {attributes: true});
+</script>

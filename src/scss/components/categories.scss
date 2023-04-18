@@ -1,0 +1,106 @@
+.categories {
+  padding-bottom: 13rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
+  &__title-wrapper {
+    overflow: hidden;
+    margin-bottom: 3rem;
+    padding-bottom: 0.6rem;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2.2rem;
+    }
+  }
+
+  &__title {
+    font: var(--title-h2);
+    text-align: center;
+
+    opacity: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    max-width: 113rem;
+    margin: 0 auto;
+
+    opacity: 0;
+
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+  }
+
+  &__item {
+    @include breakpoint(mobile) {
+      &:nth-child(n + 7) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-link {
+    background-color: var(--gray-color);
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.8rem;
+      height: 100%;
+      min-height: 8rem;
+
+      border-radius: 1rem;
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      @include breakpoint(mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+
+    span {
+      white-space: nowrap;
+
+      @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        text-align: center;
+        white-space: normal;
+      }
+    }
+  }
+
+  &__more-button-block {
+    @include breakpoint(mobile) {
+      grid-column: span 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.6rem;
+    }
+  }
+}

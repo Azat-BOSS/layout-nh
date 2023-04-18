@@ -1,0 +1,12 @@
+<div class="press-filter__container swiper js-init-slider" data-slides="auto">
+    <div class="press-filter swiper-wrapper">
+        {{#each data }}
+            <div class="press-filter__radio-wrapper swiper-slide">
+                <div class="press-filter__radio-container js-title-animate">
+                    <input class="press-filter__radio visually-hidden" type="radio" name="pressNews" id="{{this.id}}"{{#if checked }} checked{{/if}}>
+                    <label class="press-filter__label" for="{{this.id}}"><span>{{this.text}}</span></label>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

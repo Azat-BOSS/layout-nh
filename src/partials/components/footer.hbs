@@ -1,0 +1,100 @@
+<footer class="footer{{#if footerNone }} visually-hidden{{/if}}">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top-img">
+                <img class="lazyload" data-src="img/footer-top.png" alt="Таблетки">
+            </div>
+            <p class="footer__top-desc">
+                Хотите стать частью бренда
+                и&nbsp;продавать нашу продукцию?
+            </p>
+            <a class="footer__top-link" href="#distributor">
+                <span>Хочу стать дистрибьютором</span>
+                <div class="footer__top-link-icon">
+                    <svg>
+                        <use xlink:href="#slider-arrow"></use>
+                    </svg>
+                    <svg>
+                        <use xlink:href="#slider-arrow-mobile"></use>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="footer__body">
+            <div class="footer__body-left">
+                <a class="footer__logo link" aria-label="Логотип" href="index.html">
+                    <svg>
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <div class="footer__company-info">
+                    <span class="footer__company-name" >ООО «НАТУРАЛЬНОЕ ЗДОРОВЬЕ»</span>
+                    <address class="footer__company-address">
+                        420021, Российская Федерация, Республика Татарстан, г. Казань, ул. Сары Садыковой, 37
+                    </address>
+                    <div class="footer__company-ids">
+                        <span>ИНН 1831193547</span>
+                        <span>ОГРН 1191832005595</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="footer__body-right">
+                <ul class="footer__menu">
+                    {{#each footerMenu }}
+                        <li class="footer__menu-item{{#if this.mod}} footer__menu-item--wide{{/if}}">
+                            <h3 class="footer__menu-title">{{this.title}}</h3>
+                            <div class="footer__menu-links">
+                                {{#each this.footerList }}
+                                    {{#if scheduleTerm }}
+                                        <div class="footer__menu-schedule">
+                                            <span class="footer__menu-schedule-term">{{this.scheduleTerm}}</span>
+                                            <span class="footer__menu-schedule-value">{{this.scheduleValue}}</span>
+                                        </div>
+                                    {{else if this.address }}
+                                        <address class="footer__menu-address">{{{this.address}}}</address>
+                                    {{else}}
+                                        <a class="footer__menu-link link{{#if this.mod }} footer__menu-link--underlined{{/if}}" href="{{this.link}}">
+                                            {{this.text}}
+                                        </a>
+                                    {{/if}}
+                                {{/each}}
+                            </div>
+                        </li>
+                    {{/each}}
+                    <li class="footer__socials">
+                    {{#each socials }}
+                        <div class="footer__social">
+                            <a class="footer__social-link" aria-label="Социальная сеть" href="#">
+                                <svg>
+                                    <use xlink:href="#{{this.svg}}"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    {{/each}}
+                    </li>
+                </ul>
+                <ul class="footer__socials">
+                    {{#each socials }}
+                        <li class="footer__social">
+                            <a class="footer__social-link" aria-label="Социальная сеть" href="#">
+                                <svg>
+                                    <use xlink:href="#{{this.svg}}"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+                <div class="footer__bottom">
+                    <a class="footer__confidence-link link" href="#">Правовая информация</a>
+                    <span class="footer__confidence">© 2017–2022 Все права защищены</span>
+                    <a class="footer__developer link" href="#">
+                        <span>Сайт разработан</span>
+                        <svg>
+                            <use xlink:href="#mark-weber"></use>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</footer>

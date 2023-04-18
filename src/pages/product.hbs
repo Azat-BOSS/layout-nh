@@ -1,0 +1,232 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="product-card js-section-animate">
+            <div class="container">
+                <div class="product-card__wrapper">
+                    <div class="product-card__img">
+                        <div class="product-card__img-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each products }}
+                                    <div class="product-card__img-slide swiper-slide">
+                                        <picture>
+                                            <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото продукта">
+                                        </picture>
+                                    </div>
+                                {{/each}}
+                            </div>
+                            {{> slider-navigation }}
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="product-card__tags">
+                            <span class="product-card__tag">
+                                <svg>
+                                    <use xlink:href="#hit-icon"></use>
+                                </svg>
+                                <span>Хит продаж</span>
+                            </span>
+                            <span class="product-card__tag">
+                                <svg>
+                                    <use xlink:href="#hit-icon"></use>
+                                </svg>
+                                <span>Хит продаж</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product-card__content">
+                        {{> breadcrumbs data=breadcrumbs }}
+                        <div class="product-card__categories">
+                            <div class="product-card__category">
+                                <svg>
+                                    <use xlink:href="#category-1"></use>
+                                </svg>
+                                <span>Желудок и кишечник</span>
+                            </div>
+                            <div class="product-card__category">
+                                <svg>
+                                    <use xlink:href="#category-2"></use>
+                                </svg>
+                                <span>Кости и суставы</span>
+                            </div>
+                        </div>
+                        <h2 class="product-card__title">BioPit</h2>
+                        <p class="product-card__desc">Природный коллаген</p>
+                        <div class="product-card__content-bottom">
+                            <div class="product-card__features">
+                                <span class="product-card__features-title">Чем полезен</span>
+                                <ul class="product-card__features-list">
+                                    {{#each productFeatures }}
+                                        <li class="product-card__features-item">{{this.text}}</li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            <div class="product-card__info">
+                                <div class="product-card__info-property">
+                                    <div class="product-card__volume">
+                                        <span class="product-card__volume-desc">Объем</span>
+                                        <div class="product-card__volume-value">380 гр</div>
+                                    </div>
+                                    <span class="product-card__price">3 990 ₽</span>
+                                </div>
+                                <button class="product-card__button button button--green" type="button">В корзину
+                                </button>
+                                <span class="product-card__delivery">Бесплатная доставка</span>
+                                <span class="product-card__delivery-desc">от 4 500 ₽ по России и СНГ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-property js-section-animate">
+            <div class="container">
+                <div class="product-property__wrapper">
+                    <div class="product-property__accordions">
+                        {{#each property }}
+                            <div class="product-property__accordion js-accordion" data-close-other="true">
+                                <div class="product-property__accordion-header js-accordion-btn">
+                                    <h3 class="product-property__accordion-title">{{this.title}}</h3>
+                                    <svg>
+                                        <use xlink:href="#arrow-down-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="product-property__accordion-content js-accordion-content">
+                                    <h3>Что такое Nasus?</h3>
+                                    <p>
+                                        Полость сердца разделена на два предсердия и два желудочка. Левое предсердие и
+                                        левый желудочек в совокупности образуют «артериальное сердце», названное так по
+                                        типу проходящей через него крови, правый объединяются в «венозное сердце»,
+                                        названное по тому же принципу. Сокращение сердца называется систолой, а
+                                        расслабление — диастолой.
+                                    </p>
+                                    <h4>Полость сердца разделена на:</h4>
+                                    <ul>
+                                        <li>Два предсердия</li>
+                                        <li>Два желудочка</li>
+                                    </ul>
+                                    <h4>Полость сердца разделена на:</h4>
+                                    <ol>
+                                        <li>Два предсердия</li>
+                                        <li>Два желудочка</li>
+                                    </ol>
+                                    <h3>Что такое Nasus?</h3>
+                                    <p>
+                                        Полость сердца разделена на два предсердия и два желудочка. Левое предсердие и
+                                        левый желудочек в совокупности образуют «артериальное сердце», названное так по
+                                        типу проходящей через него крови, правый объединяются в «венозное сердце»,
+                                        названное по тому же принципу. Сокращение сердца называется систолой, а
+                                        расслабление — диастолой.
+                                    </p>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                    <div class="product-property__img-block">
+                        <div class="product-property__img">
+                            <picture>
+                                <source data-srcset="img/property-1.webp" type="image/webp">
+                                <img class="lazyload" data-src="img/property-1.jpg" alt="Фото продукта">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-description ">
+            <div class="wide-text-container">
+                <h1 class="product-description__title">Описание товара</h1>
+                <h3>Основная информация</h3>
+                <p>
+                    Ресвератрол – это вещество, содержащееся в семенах и кожуре винограда, темных ягодах, орехах, какао
+                    и
+                    пр. Его природное предназначение состоит в том, чтобы не дать солнечным лучам, бактериям и грибкам
+                    повредить свежий плод.
+                    Благодаря этим свойствам, ресвератрол обладает множеством положительных эффектов для здоровья и
+                    молодости человека:
+                </p>
+                <h4>Абзац 1.10.32 "de Finibus Bonorum et Malorum"</h4>
+                <p>
+                    Обладает выраженной антиоксидантной активностью. По своим антиоксидантным свойствам ресвератрол
+                    превосходит витамины С и Е. Небольшие дозы ресвератрола блокируют ферменты каспазы, вызывающие
+                    воспалительный процесс и некроз тканей. Согласно свободнорадикальной теории, старение организма
+                    происходит вследствие накопления в клетках «поломок», полученных от воздействия активных форм
+                    кислорода. Таким образом ресвератрол, защищающий организм от этого воздействия, можно назвать
+                    «хранителем молодости».
+                </p>
+                <div class="graphic-block">
+                    <div class="graphic-block__img">
+                        <img src="img/content-1.jpg" data-fancybox alt="Фото">
+                    </div>
+                    <div class="graphic-block__content">
+                        <p>
+                            Имеет доказанный антиканцерогенный эффект. Об этом свидетельствуют многочисленные опыты,
+                            проводимые уже на протяжение 30 лет. Например, японские ученые Кафедры Хирургии Университета
+                            Киото засвидетельствовали уменьшение опухоли пищевода под воздействием ресвератрола. Малые
+                            дозы ресвератрола (0,02-8 мг/кг), вводимые перорально, сокращали размер опухолей рака
+                            желудка и прямой кишки, замедляли развитие карциномы Льюиса.
+                        </p>
+                        <p>
+                            Оказывает положительное влияние на здоровье сердечно-сосудистой системы. Профессор Серж Рено
+                            в 90-х годах XX века ввел в обиход понятие «французский парадокс», заключающееся в том, что
+                            уровень сердечно-сосудистых заболеваний у французов относительно низок, несмотря на
+                            употребление алкоголя и жирной пищи. Профессор объясняет это явление употреблением красного
+                            сухого вина, состав которого богат ресвератролом. И в самом деле, ресвератрол препятствует
+                            накоплению и окислению липопротеинов низкой плотности («плохого холестерина»), тем самым
+                            предотвращая развитие атеросклероза. <br>
+                            Продлевает активность мозга, препятствуя образованию амилоидных бляшек (причина болезни
+                            Альцгеймера)<br>
+                            Обладает противовоспалительным действием, блокируя выработку веществ, запускающих
+                            воспалительный процесс (арахидоновой кислоты и циклооксигеназы-2).
+                        </p>
+                    </div>
+                </div>
+                <h4>Почему «BioPit» от Natural Health – это лучший выбор?</h4>
+                <button class="product-description__more-button js-read-button" type="button">Читать полность</button>
+                <p>
+                    А для достижения эффекта от приема препарата важно не то, какое количество полезного вещества
+                    попадет в организм, а сколько его усвоится и «пойдет в дело».
+                </p>
+                <div class="graphic-block graphic-block--reversed">
+                    <div class="graphic-block__img">
+                        <img src="img/content-2.jpg" data-fancybox alt="Фото">
+                    </div>
+                    <div class="graphic-block__content">
+                        <p>
+                            Имеет доказанный антиканцерогенный эффект. Об этом свидетельствуют многочисленные опыты,
+                            проводимые уже на протяжение 30 лет. Например, японские ученые Кафедры Хирургии Университета
+                            Киото засвидетельствовали уменьшение опухоли пищевода под воздействием ресвератрола. Малые
+                            дозы ресвератрола (0,02-8 мг/кг), вводимые перорально, сокращали размер опухолей рака
+                            желудка и прямой кишки, замедляли развитие карциномы Льюиса.
+                        </p>
+                        <p>
+                            Оказывает положительное влияние на здоровье сердечно-сосудистой системы. Профессор Серж Рено
+                            в 90-х годах XX века ввел в обиход понятие «французский парадокс», заключающееся в том, что
+                            уровень сердечно-сосудистых заболеваний у французов относительно низок, несмотря на
+                            употребление алкоголя и жирной пищи. Профессор объясняет это явление употреблением красного
+                            сухого вина, состав которого богат ресвератролом. И в самом деле, ресвератрол препятствует
+                            накоплению и окислению липопротеинов низкой плотности («плохого холестерина»), тем самым
+                            предотвращая развитие атеросклероза. <br>
+                            Продлевает активность мозга, препятствуя образованию амилоидных бляшек (причина болезни
+                            Альцгеймера)<br>
+                            Обладает противовоспалительным действием, блокируя выработку веществ, запускающих
+                            воспалительный процесс (арахидоновой кислоты и циклооксигеназы-2).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="product-reviews">
+            {{> reviews-section addReview=true }}
+        </div>
+        <section class="product-popular">
+            <div class="container">
+                <div class="product-popular__title-wrapper">
+                    <h2 class="product-popular__title js-title-animate">Популярные товары</h2>
+                </div>
+                {{> catalog-list data=popular }}
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

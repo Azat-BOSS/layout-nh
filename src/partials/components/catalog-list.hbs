@@ -1,0 +1,68 @@
+{{#if slider }}
+    <div class="catalog-list__slider swiper js-init-slider" data-slides="auto" data-space="20">
+{{/if}}
+<ul class="catalog-list{{#if mod }} {{mod}}{{/if}}{{#if slider }} swiper-wrapper{{/if}} js-section-animate">
+    {{#each data }}
+        <li class="catalog-list__item{{#if ../slider }} swiper-slide{{/if}}">
+            <a href="product.html" class="catalog-list__item-link" onclick="if (event.defaultPrevented) return">
+                <div class="catalog-list__img">
+                    <picture>
+                        <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                        <img class="lazyload" data-src="{{this.img}}" alt="Фото товара">
+                    </picture>
+                    <picture>
+                        <source data-srcset="{{this.imgWebp2}}" type="image/webp">
+                        <img class="lazyload" data-src="{{this.img2}}" alt="Фото товара">
+                    </picture>
+                    {{#if hit }}
+                        <div class="catalog-list__tags">
+                            <span class="catalog-list__tag">
+                                <svg>
+                                    <use xlink:href="#hit-icon"></use>
+                                </svg>
+                                <span>Хит продаж</span>
+                            </span>
+                        </div>
+                    {{/if}}
+                    <button class="catalog-list__basket" onclick="event.preventDefault()" aria-label="Добавить в корзину">
+                        <svg>
+                            <use xlink:href="#backet-icon"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="catalog-list__content">
+                    <div class="catalog-list__price-block">
+                        <h3 class="catalog-list__title">{{this.title}}</h3>
+                        <div class="catalog-list__price-wrapper">
+                            <span class="catalog-list__price{{#if discount }} catalog-list__price--discount{{/if}}">{{this.price}}</span>
+                            {{#if discount }}
+                                <span class="catalog-list__old-price">3990 ₽</span>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <p class="catalog-list__text">{{this.text}}</p>
+                    <ul class="catalog-list__advantages">
+                        <li>
+                            <svg>
+                                <use xlink:href="#shield-icon"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg>
+                                <use xlink:href="#moon-icon"></use>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg>
+                                <use xlink:href="#bone-icon"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</ul>
+{{#if slider }}
+    </div>
+{{/if}}

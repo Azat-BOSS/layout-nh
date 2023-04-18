@@ -1,0 +1,83 @@
+.news-other {
+  padding-bottom: 12.6rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 9.2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 7rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 4.8rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6.6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2.9rem;
+    }
+  }
+
+  &__title-wrapper {
+    padding-bottom: 0.6rem;
+    overflow: hidden;
+  }
+
+  &__title {
+    font: var(--title-h1)
+  }
+
+  &__link {
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  &__mobile-link {
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: flex;
+      max-width: 13.8rem;
+      margin: 4rem auto 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9.2rem 2rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8rem 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6.4rem 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 4.4rem 2rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

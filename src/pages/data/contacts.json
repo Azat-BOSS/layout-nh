@@ -1,0 +1,46 @@
+{
+  "title": "Контакты",
+  "breadcrumbs": [
+    {
+      "link": "index.html",
+      "text": "Главная"
+    },
+    {
+      "link": "contacts.html",
+      "text": "Контакты"
+    }
+  ],
+  "schedule": [
+    {
+      "text": "Пн-Пт: с 9:00 до 18:00 "
+    },
+    {
+      "text": "Сб и Вск – выходные дни"
+    }
+  ],
+  "contactsLinks": [
+    {
+      "link": "tel:89534945288",
+      "text": "8 (953) 494-52-88"
+    },
+    {
+      "link": "tel:88001015923",
+      "text": "8 (800) 101-59-23"
+    },
+    {
+      "link": "mailto:info@nhstar.ru",
+      "text": "info@nhstar.ru"
+    }
+  ],
+  "requisites": [
+    {
+      "text": "ООО «Натуральное Здоровье»"
+    },
+    {
+      "text": "ОГРН 1191832005595"
+    },
+    {
+      "text": "ИНН 1831193547"
+    }
+  ]
+}

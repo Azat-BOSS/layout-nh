@@ -1,0 +1,38 @@
+.invitation {
+  padding-bottom: 12rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+    padding-bottom: 4rem;
+
+    .container {
+      &:last-child {
+        order: 1;
+      }
+    }
+  }
+
+  .lead-slider:first-child {
+    margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      /*margin-bottom: 0;*/
+    }
+  }
+}

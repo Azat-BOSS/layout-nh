@@ -1,0 +1,49 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+        {{> purchases-form}}
+        {{> basket-popular}}
+        <div class="test">
+            <section class="awards js-section-animate">
+                <div class="container">
+                    <div class="awards__inner">
+                        <h2 class="awards__title">награды</h2>
+                        <p class="awards__desc">Следим за качеством <span>&nbsp;и регулярно побеждаем в конкурсах</span></p>
+                        <div class="awards__slider swiper">
+                            <ul class="awards__list swiper-wrapper">
+                                {{#each awards }}
+                                    <li class="awards__item swiper-slide">
+                                        <div class="awards__item-img-block">
+                                            <div class="awards__item-img">
+                                                <picture>
+                                                    <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                                    <img class="lazyload" data-fancybox="awards" data-src="{{this.img}}" alt="Фото награды">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <h3 class="awards__item-title">{{this.title}}</h3>
+                                        <time class="awards__item-date">{{this.time}}</time>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="news-section">
+                <div class="container">
+                    <div class="news-section__title-wrapper">
+                        <h2 class="news-section__title js-title-animate">Пресс-центр</h2>
+                    </div>
+                    <header class="news-section__header">
+                        <div class="news-section__filter">
+                            {{> press-filter data=pressFilter }}
+                        </div>
+                        <a class="news-section__link button button--bordered js-section-animate" href="news.html">Смотреть все</a>
+                    </header>
+                    {{> news-list data=news }}
+                    <a class="news-section__tablet-link button button--bordered" href="news.html">Смотреть все</a>
+                </div>
+            </section>
+        </div>
+    {{/content}}
+{{/extend}}

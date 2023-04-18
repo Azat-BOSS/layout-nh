@@ -1,0 +1,279 @@
+{
+  "menu": [
+    {
+      "link": "delivery.html",
+      "text": "Доставка"
+    },
+    {
+      "link": "about.html",
+      "text": "О компании"
+    },
+    {
+      "link": "reviews.html",
+      "text": "Отзывы"
+    },
+    {
+      "link": "dealer.html",
+      "text": "Станьте дилером"
+    },
+    {
+      "link": "press-center.html",
+      "text": "Пресс-центр"
+    },
+    {
+      "link": "contacts.html",
+      "text": "Контакты"
+    }
+  ],
+  "burgerMenu": [
+    {
+      "link": "#",
+      "text": "Акции"
+    },
+    {
+      "link": "#",
+      "text": "Доставка"
+    },
+    {
+      "link": "#",
+      "text": "О компании"
+    },
+    {
+      "link": "#",
+      "text": "Отзывы"
+    },
+    {
+      "link": "#",
+      "text": "Станьте дилером"
+    },
+    {
+      "link": "#",
+      "text": "Пресс-центр"
+    },
+    {
+      "link": "#",
+      "text": "Контакты"
+    }
+  ],
+  "footerMenu": [
+    {
+      "title": "Интернет-магазин",
+      "footerList": [
+        {
+          "link": "#",
+          "text": "Все продукты"
+        },
+        {
+          "link": "#",
+          "text": "ЭИП"
+        },
+        {
+          "link": "#",
+          "text": "Сон и комфорт"
+        },
+        {
+          "link": "#",
+          "text": "Косметика"
+        },
+        {
+          "link": "#",
+          "text": "Добавки"
+        }
+      ]
+    },
+    {
+      "title": "Компания",
+      "footerList": [
+        {
+          "link": "#",
+          "text": "О компании"
+        },
+        {
+          "link": "#",
+          "text": "Как стать диллером?"
+        },
+        {
+          "link": "#",
+          "text": "Сертификаты"
+        },
+        {
+          "link": "#",
+          "text": "Новости"
+        }
+      ]
+    },
+    {
+      "title": "Покупателям",
+      "footerList": [
+        {
+          "link": "#",
+          "text": "Доставка и оплата"
+        },
+        {
+          "link": "#",
+          "text": "Контакты"
+        }
+      ]
+    },
+    {
+      "title": "Контакты",
+      "footerList": [
+        {
+          "address": "Казань, ул. Восстания 100 <br> к5050"
+        },
+        {
+          "link": "#",
+          "text": "8 800 101–59–23",
+          "mod": true
+        },
+        {
+          "link": "#",
+          "text": "info@nhstar.ru",
+          "mod": true
+        }
+      ]
+    },
+    {
+      "title": "Часы работы",
+      "mod": true,
+      "footerList": [
+        {
+          "scheduleTerm": "Понедельник - Четверг",
+          "scheduleValue": "09:00 -18:00"
+        },
+        {
+          "scheduleTerm": "Пятница",
+          "scheduleValue": "09:00 -17:00"
+        },
+        {
+          "scheduleTerm": "Суббота - Воскресение",
+          "scheduleValue": "выходной"
+        }
+      ]
+    }
+  ],
+  "socials": [
+    {
+      "svg": "social-1"
+    },
+    {
+      "svg": "social-2"
+    }
+  ],
+  "reviews": [
+    {
+      "img": "img/review-1.jpg",
+      "imgWebp": "img/review-1.webp",
+      "name": "Мирослава",
+      "info": "28 лет, Казань",
+      "text": "Нашла я его случайным образом, покупала белковые батончики (перекусывала ими перед тренировкой или после), и вот на батончиках вычитала, что в составе присутствует L-карнитин, вроде способствующий улучшению обмена веществ."
+    },
+    {
+      "img": "img/review-2.jpg",
+      "imgWebp": "img/review-2.webp",
+      "name": "Елизавета",
+      "info": "33 года, Москва",
+      "text": "Взяла эти капли , капнула по капле в каждый глаз, первое ощущение- как будто песок в глаза сыпанули, жёсткий дискомфорт,но секунд через 10 было ощущение лёгкости,ясности, как дворники у машины расчищают грязь и глаза как будто открылись, сошла какая-то пелена, ощущение полного восторга."
+    },
+    {
+      "img": "img/review-3.jpg",
+      "imgWebp": "img/review-3.webp",
+      "name": "Мария",
+      "info": "27 лет, Казань",
+      "text": "Нашла я его случайным образом, покупала белковые батончики (перекусывала ими перед тренировкой или после), и вот на батончиках вычитала, что в составе присутствует L-карнитин, вроде способствующий улучшению обмена веществ."
+    }
+  ],
+  "popular": [
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации.",
+      "hit": true
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации."
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    }
+  ],
+  "details": [
+    {
+      "name": "4 товара",
+      "value": "1 250 ₽"
+    },
+    {
+      "name": "Доставка",
+      "value": "250 ₽"
+    }
+  ],
+  "searchCatalog": [
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации.",
+      "hit": true
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Aurum",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    }
+  ],
+  "searchTags": [
+    {
+      "text": "Сон и комфорт"
+    },
+    {
+      "text": "Иммунитет"
+    },
+    {
+      "text": "Сердце и сосуды"
+    },
+    {
+      "text": "Кости и суставы"
+    },
+    {
+      "text": "Мужское здоровье"
+    },
+    {
+      "text": "Желудок и кишечник"
+    },
+    {
+      "text": "Легкое дыхание"
+    }
+  ]
+}

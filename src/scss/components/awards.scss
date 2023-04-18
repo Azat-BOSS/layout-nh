@@ -1,0 +1,163 @@
+.awards {
+  padding-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    order: 4;
+  }
+
+  &__inner {
+    padding: 8rem 0 0;
+
+    background-color: var(--gray-color);
+    border-radius: 2rem;
+
+    @include breakpoint(tablet) {
+      padding-top: 7.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-top: 7rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-top: 6rem;
+      border-radius: 1rem;
+    }
+  }
+
+  &__title {
+    margin: 0 auto 2.8rem;
+
+    font: var(--other);
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__desc {
+    max-width: 102rem;
+    margin: 0 auto 7.2rem;
+
+    font: var(--title-h1);
+    text-align: center;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 6.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 6rem;
+      font-size: 3rem;
+    }
+
+    span {
+      opacity: 0.1;
+    }
+  }
+
+  &__slider {
+    border-top: 1px solid #E6E6E6;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.6rem 2rem 4.2rem;
+
+    &:hover {
+      .awards__item-img img {
+        transform: translateX(-50%) scale(1.1);
+      }
+    }
+
+    @include breakpoint(tablet) {
+      padding: 3.8rem 2rem 3.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3.2rem 2rem 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      max-width: 26.6rem;
+      padding: 2.7rem 2rem 1.3rem;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid #E6E6E6;
+    }
+  }
+
+  &__item-img-block {
+    width: 100%;
+    max-width: 18rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      max-width: 17rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      max-width: 16rem;
+      margin-bottom: 1.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 14.8rem;
+      margin-bottom: 0.7rem;
+    }
+  }
+
+  &__item-img {
+    position: relative;
+
+    display: block;
+    padding-top: 70%;
+
+    cursor: pointer;
+
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      transition: 0.3s;
+    }
+  }
+
+  &__item-title {
+    max-width: 26rem;
+    margin-bottom: 0.4rem;
+
+    font: var(--text-t3);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      max-width: 21rem;
+    }
+  }
+
+  &__item-date {
+    font: var(--text-t3);
+    opacity: 0.3;
+  }
+}

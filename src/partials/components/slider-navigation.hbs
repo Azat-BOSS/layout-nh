@@ -1,0 +1,24 @@
+<div class="slider-navigation{{#if mod }} {{mod}}{{/if}} js-section-animate js-slider-navigation">
+    <button class="slider-navigation__button js-prev-slide" aria-label="Назад">
+        {{#if smallArrow }}
+            <svg>
+                <use xlink:href="#slider-small-arrow"></use>
+            </svg>
+        {{else}}
+            <svg>
+                <use xlink:href="#slider-arrow"></use>
+            </svg>
+        {{/if}}
+    </button>
+    <button class="slider-navigation__button js-next-slide" aria-label="Вперед">
+        {{#if smallArrow }}
+            <svg>
+                <use xlink:href="#slider-small-arrow"></use>
+            </svg>
+        {{else}}
+            <svg>
+                <use xlink:href="#slider-arrow"></use>
+            </svg>
+        {{/if}}
+    </button>
+</div>

@@ -1,0 +1,144 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="basket">
+            <div class="container">
+                <div class="basket__title-wrapper">
+                    <h1 class="basket__title js-title-animate">Корзина</h1>
+                </div>
+                <div class="basket__wrapper js-section-animate">
+                    <div class="basket__products">
+                        <div class="basket__products-inner">
+                            <div class="basket__products-header">
+                            <span class="basket__products-count">
+                                <span>4</span> товара в корзине
+                            </span>
+                                <button class="basket__products-clean">
+                                    <span>Очистить корзину</span>
+                                    <svg>
+                                        <use xlink:href="#urn-icon"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="basket__products-list">
+                                {{#each products }}
+                                    <li class="basket__products-item">
+                                        <div class="basket__products-item-info">
+                                            <div class="basket__products-item-img">
+                                                <picture>
+                                                    <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                                    <img class="lazyload" data-src="{{this.img}}" alt="Фото продукта">
+                                                </picture>
+                                            </div>
+                                            <div class="basket__products-item-content">
+                                                <h3 class="basket__products-item-title"><a href="product.html">{{this.title}}</a></h3>
+                                                <p class="basket__products-item-text">{{this.text}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="basket__products-item-price-block">
+                                            <div class="basket__products-item-count">
+                                                <button class="basket__products-item-count-button" aria-label="Увеличить количество">
+                                                    <svg>
+                                                        <use xlink:href="#minus-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <input class="basket__products-item-count-number" aria-label="Уменьшить количество" type="number" name="productCount" id="productCount" value="4">
+                                                <button class="basket__products-item-count-button">
+                                                    <svg>
+                                                        <use xlink:href="#plus-icon"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <span class="basket__products-item-price">
+                                                <span class="basket__products-item-price-number">6 000 ₽</span>
+                                                <span class="basket__products-item-price-piece">1 250 ₽/шт.</span>
+                                            </span>
+                                        </div>
+                                        <button class="basket__products-item-delete" aria-label="Очистить все">
+                                            <svg>
+                                                <use xlink:href="#urn-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                            <ul class="basket__presents">
+                                <li class="basket__present">
+                                    <div class="basket__present-info">
+                                        <div class="basket__present-img">
+                                            <picture>
+                                                <source data-srcset="img/present-1.webp" type="image/webp">
+                                                <img class="lazyload" src="img/present-1.jpg" alt="Фото продукта">
+                                            </picture>
+                                        </div>
+                                        <div class="basket__present-content">
+                                            <h3 class="basket__present-title"><a href="product.html">Макроэлемент</a></h3>
+                                            <p class="basket__present-text">Нормализует процессы в соединительной ткани</p>
+                                        </div>
+                                    </div>
+                                    <div class="basket__present-desc">
+                                        <svg>
+                                            <use xlink:href="#present-icon"></use>
+                                        </svg>
+                                        <span>
+                                            <span>У вас подарок</span>
+                                            <span class="basket__present-condition-mobile">Подарок действует при заказе от 6000 ₽</span>
+                                        </span>
+                                    </div>
+                                    <p class="basket__present-condition">Подарок действует при заказе от 6000 ₽</p>
+                                </li>
+                                <li class="basket__present">
+                                    <div class="basket__present-info">
+                                        <div class="basket__present-img">
+                                            <picture>
+                                                <source data-srcset="img/present-1.webp" type="image/webp">
+                                                <img class="lazyload" src="img/present-1.jpg" alt="Фото продукта">
+                                            </picture>
+                                        </div>
+                                        <div class="basket__present-content">
+                                            <h3 class="basket__present-title"><a href="product.html">Макроэлемент</a></h3>
+                                            <p class="basket__present-text">Нормализует процессы в соединительной ткани</p>
+                                        </div>
+                                    </div>
+                                    <div class="basket__present-desc">
+                                        <svg>
+                                            <use xlink:href="#present-icon"></use>
+                                        </svg>
+                                        <span>
+                                            <span>У вас подарок</span>
+                                            <span class="basket__present-condition-mobile">Подарок действует при заказе от 6000 ₽</span>
+                                        </span>
+                                    </div>
+                                    <p class="basket__present-condition">Подарок действует при заказе от 6000 ₽</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="basket__proposal-title">Спецпредложение</h3>
+                        <ul class="basket__proposal-list">
+                            {{#each proposal }}
+                                <li class="basket__proposal-item">
+                                    <p class="basket__proposal-condition">Подарок при заказе от <span>9000 ₽</span></p>
+                                    <div class="basket__proposal-info">
+                                        <div class="basket__proposal-img">
+                                            <picture>
+                                                <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                                <img class="lazyload" data-src="{{this.img}}" alt="Фото продукта">
+                                            </picture>
+                                        </div>
+                                        <div class="basket__proposal-content">
+                                            <h3 class="basket__proposal-item-title">{{this.title}}</h3>
+                                            <p class="basket__proposal-item-text">{{this.text}}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{> details deliver=true clickButton=true promoCode=true buttonText='Перейти к оформлению' }}
+                </div>
+            </div>
+        </section>
+        {{> basket-popular }}
+
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,51 @@
+.order-place {
+  padding: 9.2rem 0 8rem;
+
+  opacity: 0;
+
+  @include breakpoint(tablet) {
+    padding: 7rem 0 7.2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 5rem 0 6.5rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 2.8rem 0 5.2rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+
+    font: var(--title-h1);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  &__desc {
+    max-width: 49rem;
+    margin-bottom: 3rem;
+
+    font: var(--text-t2);
+    text-align: center;
+    color: rgba(28, 28, 28, 0.3);
+
+    @include breakpoint(mobile) {
+      max-width: 29.5rem;
+    }
+  }
+}

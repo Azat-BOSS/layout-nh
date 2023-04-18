@@ -1,0 +1,93 @@
+{
+  "title": "О компании",
+  "breadcrumbs": [
+    {
+      "link": "index.html",
+      "text": "Главная"
+    },
+    {
+      "link": "about.html",
+      "text": "О компании"
+    }
+  ],
+  "features": [
+    {
+      "title": "> 500 000",
+      "desc": "человек",
+      "text": "По всему миру, ежедневно получают оздоровительный эффект от приема нашей продукции."
+    },
+    {
+      "title": "> 10",
+      "desc": "иностранных государств",
+      "text": "Natiral Health ведет свою деятельность на территории более 10 иностранных государств."
+    },
+    {
+      "title": "> 40",
+      "desc": "позиций продукции",
+      "text": "Natiral Health ведет свою деятельность на территории более 10 иностранных государств."
+    }
+  ],
+  "team": [
+    {
+      "img": "img/team-1.jpg",
+      "imgWebp": "img/team-1.webp"
+    },
+    {
+      "img": "img/team-2.jpg",
+      "imgWebp": "img/team-2.webp"
+    },
+    {
+      "img": "img/team-3.jpg",
+      "imgWebp": "img/team-3.webp"
+    },
+    {
+      "img": "img/team-4.jpg",
+      "imgWebp": "img/team-4.webp"
+    },
+    {
+      "img": "img/team-5.jpg",
+      "imgWebp": "img/team-5.webp"
+    },
+    {
+      "img": "img/team-1.jpg",
+      "imgWebp": "img/team-1.webp"
+    }
+  ],
+  "achievements": [
+    {
+      "img": "img/achievement-1.jpg",
+      "imgWebp": "img/achievement-1.webp",
+      "date": "20 июня",
+      "title": "Natural Health - генеральный партнер \"Ночной Казани 2022\".",
+      "text": "16 июля прошел забег \"Ночная Казань\". Natural Health является главным спонсором данного мероприятия. Подробнее: https://m.business-gazeta.ru/article/557357"
+    },
+    {
+      "img": "img/achievement-2.jpg",
+      "imgWebp": "img/achievement-2.webp",
+      "date": "11 июня",
+      "title": "23 июля состоится пятилетие Natural Health",
+      "text": "23 июля состоится грандиозное событие -  компания Natural Health отмечает 5-летие"
+    },
+    {
+      "img": "img/achievement-3.jpg",
+      "imgWebp": "img/achievement-1.webp",
+      "date": "20 июня",
+      "title": "Natural Health - генеральный партнер \"Ночной Казани 2022\".",
+      "text": "16 июля прошел забег \"Ночная Казань\". Natural Health является главным спонсором данного мероприятия. Подробнее: https://m.business-gazeta.ru/article/557357"
+    },
+    {
+      "img": "img/achievement-4.jpg",
+      "imgWebp": "img/achievement-4.webp",
+      "date": "11 июня",
+      "title": "23 июля состоится пятилетие Natural Health",
+      "text": "23 июля состоится грандиозное событие -  компания Natural Health отмечает 5-летие"
+    },
+    {
+      "img": "img/achievement-1.jpg",
+      "imgWebp": "img/achievement-1.webp",
+      "date": "20 июня",
+      "title": "Natural Health - генеральный партнер \"Ночной Казани 2022\".",
+      "text": "16 июля прошел забег \"Ночная Казань\". Natural Health является главным спонсором данного мероприятия. Подробнее: https://m.business-gazeta.ru/article/557357"
+    }
+  ]
+}

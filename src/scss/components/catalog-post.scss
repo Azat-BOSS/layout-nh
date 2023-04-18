@@ -1,0 +1,17 @@
+.catalog-post {
+  padding-bottom: 10rem;
+
+  opacity: 0;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 6rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 4rem;
+  }
+}

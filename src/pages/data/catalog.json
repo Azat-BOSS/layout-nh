@@ -1,0 +1,258 @@
+{
+  "title": "Каталог",
+  "breadcrumbs": [
+    {
+      "link": "index.html",
+      "text": "Главная"
+    },
+    {
+      "link": "catalog.html",
+      "text": "Каталог"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "img": "category-1",
+      "text": "Сон и комфорт"
+    },
+    {
+      "id": 2,
+      "img": "category-2",
+      "text": "Иммунитет"
+    },
+    {
+      "id": 3,
+      "img": "category-3",
+      "text": "Сердце и сосуды"
+    },
+    {
+      "id": 4,
+      "img": "category-4",
+      "text": "Кости и суставы"
+    },
+    {
+      "id": 5,
+      "img": "category-5",
+      "text": "Мужское здоровье"
+    },
+    {
+      "id": 6,
+      "img": "category-6",
+      "text": "Женское здоровье"
+    },
+    {
+      "id": 7,
+      "img": "category-7",
+      "text": "Желудок и кишечник"
+    },
+    {
+      "id": 8,
+      "img": "category-8",
+      "text": "Легкое дыхание"
+    },
+    {
+      "id": 9,
+      "img": "category-9",
+      "text": "Для глаз"
+    },
+    {
+      "id": 10,
+      "img": "category-3",
+      "text": "Для носа"
+    },
+    {
+      "id": 11,
+      "img": "category-3",
+      "text": "Сердце и сосуды"
+    }
+  ],
+  "moreCategories": [
+    {
+      "id": 12,
+      "img": "category-1",
+      "text": "Сон и комфорт"
+    },
+    {
+      "id": 13,
+      "img": "category-2",
+      "text": "Иммунитет"
+    },
+    {
+      "id": 14,
+      "img": "category-3",
+      "text": "Сердце и сосуды"
+    },
+    {
+      "id": 15,
+      "img": "category-4",
+      "text": "Кости и суставы"
+    },
+    {
+      "id": 16,
+      "img": "category-5",
+      "text": "Мужское здоровье"
+    },
+    {
+      "id": 17,
+      "img": "category-6",
+      "text": "Женское здоровье"
+    },
+    {
+      "id": 18,
+      "img": "category-7",
+      "text": "Желудок и кишечник"
+    }
+  ],
+  "moreCategoriesMobile": [
+    {
+      "id": 19,
+      "img": "category-1",
+      "text": "Сон и комфорт"
+    },
+    {
+      "id": 20,
+      "img": "category-2",
+      "text": "Иммунитет"
+    },
+    {
+      "id": 21,
+      "img": "category-3",
+      "text": "Сердце и сосуды"
+    },
+    {
+      "id": 22,
+      "img": "category-4",
+      "text": "Кости и суставы"
+    },
+    {
+      "id": 23,
+      "img": "category-5",
+      "text": "Мужское здоровье"
+    },
+    {
+      "id": 24,
+      "img": "category-6",
+      "text": "Женское здоровье"
+    },
+    {
+      "id": 25,
+      "img": "category-7",
+      "text": "Желудок и кишечник"
+    }
+  ],
+  "catalog": [
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации.",
+      "hit": true
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "discount": true,
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации."
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации.",
+      "hit": true
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации."
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации.",
+      "hit": true
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации."
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    }
+  ]
+}

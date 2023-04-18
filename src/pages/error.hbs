@@ -1,0 +1,30 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="error js-section-animate">
+            <div class="container">
+                <div class="error__wrapper">
+                    <span class="error__number">404</span>
+                    <h1 class="error__title">Ууууупс! Страницы больше нет, <span>или она никогда не существовала</span></h1>
+                    <a class="error__link button button--black" href="catalog.html">В каталог</a>
+                    <div class="promo">
+                        <div class="promo__content">
+                            <h3 class="promo__title">Мы дарим вам промокод на скидки 5%</h3>
+                            <p class="promo__desc">Успейте воспользоваться им до 3 мая 2022</p>
+                        </div>
+                        <form class="promo__form" action="#">
+                            <input class="promo__input js-copy-text" type="text" name="promo" id="promo" readonly value="PROMO404">
+                            <button class="promo__copy-button js-copy-button" type="button" aria-label="Скопировать">
+                                <svg>
+                                    <use xlink:href="#copy-icon"></use>
+                                </svg>
+                            </button>
+                            <span class="promo__tooltip js-copy-tooltip">Скопировано</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

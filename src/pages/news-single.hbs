@@ -1,0 +1,148 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="news-single js-section-animate">
+            <div class="container">
+                <div class="news-single__wrapper">
+                    <a class="news-single__back-link" href="press-center.html">
+                        <svg>
+                            <use xlink:href="#slider-arrow"></use>
+                        </svg>
+                        <span>Пресс-центр</span>
+                    </a>
+                    <div class="news-single__content">
+                        <time class="news-single__time" datetime="2022-07-22">22 июля</time>
+                        <h1 class="news-single__title">22 июля состоялось открытие третьего завода Natural Health в
+                            Казани</h1>
+                        <div class="text-container">
+                            <figure class="img">
+                                <div class="img__img-block">
+                                    <picture>
+                                        <source data-srcset="img/news-single-1.webp" type="image/webp">
+                                        <img src="img/news-single-1.jpg" data-fancybox alt="Фото">
+                                    </picture>
+                                </div>
+                                <figcaption class="img__caption">Новый завод в Казани</figcaption>
+                            </figure>
+                            <div class="lead">
+                                <p>
+                                    22 июля состоялось открытие новой производственной площадки в Казани.
+                                    Это место по праву считается одним из лучших, ведь оно соотвествует всем
+                                    инновационным технологиям и отвечает самым последним стандартам качества.
+                                </p>
+                            </div>
+                            <h2>Заголовок H2</h2>
+                            <p>
+                                В лингвистике термин «текст» используется в широком значении, включая и образцы устной
+                                речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так,
+                                например, И. Р. Гальперин определяет текст следующим образом: «Это письменное сообщение,
+                                объективированное в виде письменного документа, состоящее из ряда высказываний,
+                                объединённых разными типами лексической, грамматической и логической связи, имеющее
+                                определённый моральный характер, прагматическую установку и соответственно литературно
+                                обработанное».
+                            </p>
+                            <img src="img/news-single-1.jpg" data-fancybox alt="Фото">
+                            <h3>Заголовок H3</h3>
+                            <p>
+                                В лингвистике термин «текст» используется в широком значении, включая и образцы устной
+                                речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так,
+                                например, И. Р. Гальперин определяет текст следующим образом: «Это письменное сообщение,
+                                объективированное в виде письменного документа, состоящее из ряда высказываний,
+                                объединённых разными типами лексической, грамматической и логической связи, имеющее
+                                определённый моральный характер, прагматическую установку и соответственно литературно
+                                обработанное».
+                            </p>
+                            <div class="slider swiper js-init-slider">
+                                <div class="swiper-wrapper">
+                                    {{#each slider }}
+                                        <div class="slider__slide swiper-slide">
+                                            <picture>
+                                                <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                                <img class="slider__img" src="{{this.img}}" data-fancybox="sliderImg" alt="Фото">
+                                            </picture>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                {{> slider-navigation }}
+                            </div>
+                            <p>
+                                В лингвистике термин «текст» используется в широком значении, включая и образцы устной
+                                речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так,
+                                например, И. Р. Гальперин определяет текст следующим образом: «Это письменное сообщение,
+                                объективированное в виде письменного документа, состоящее из ряда высказываний,
+                                объединённых разными типами лексической, грамматической и логической связи, имеющее
+                                определённый моральный характер, прагматическую установку и соответственно литературно
+                                обработанное».
+                            </p>
+                            <div class="video" data-fancybox>
+                                <a class="video__link" data-src="https://youtu.be/Fcc0VRy19VM" data-fancybox>
+                                    <picture>
+                                        <source data-srcset="img/news-single-2.webp" type="image/webp">
+                                        <img class="video__preview lazyload" data-src="img/news-single-2.jpg" alt="Фото">
+                                    </picture>
+                                    <button class="video__button" aria-label="Запустить видео">
+                                        <svg>
+                                            <use xlink:href="#video-icon"></use>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </div>
+                            <h3>Маркированный список</h3>
+                            <ul>
+                                {{#each ul }}
+                                    <li>{{this.text}}</li>
+                                {{/each}}
+                            </ul>
+                            <blockquote class="blockquote">
+                                <div class="blockquote__text">
+                                    <p>
+                                        В составе нашей продукции только натуральные растительные ингредиенты, <span>которые
+                                        стабилизируют процесс обмена веществ и общий метаболизм.</span>
+                                    </p>
+                                </div>
+                                <div class="blockquote__author">
+                                    <div class="blockquote__author-img-block">
+                                        <img class="blockquote__author-img lazyload" data-src="img/review-1.jpg" alt="Фото автора">
+                                    </div>
+                                    <div class="blockquote__author-info">
+                                        <cite class="blockquote__author-name">Мирослава Андреева</cite>
+                                        <span class="blockquote__author-position">Генеральный директор</span>
+                                    </div>
+                                </div>
+                            </blockquote>
+                            <h3>Заголовок H3</h3>
+                            <p>
+                                В лингвистике термин «текст» используется в широком значении, включая и образцы устной
+                                речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так,
+                                например, И. Р. Гальперин определяет текст следующим образом: «Это письменное сообщение,
+                                объективированное в виде письменного документа, состоящее из ряда высказываний,
+                                объединённых разными типами лексической, грамматической и логической связи, имеющее
+                                определённый моральный характер, прагматическую установку и соответственно литературно
+                                обработанное».
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {{> mailing }}
+            </div>
+        </section>
+        <section class="news-other">
+            <div class="container">
+                <header class="news-other__header">
+                    <div class="news-other__title-wrapper">
+                        <h2 class="news-other__title js-title-animate">Похожие статьи</h2>
+                    </div>
+                    <a class="news-other__link button button--bordered js-section-animate" href="press-center.html">Смотреть все</a>
+                </header>
+                <ul class="news-other__list js-section-animate">
+                    {{#each news }}
+                        {{> news-card }}
+                    {{/each}}
+                </ul>
+                <a class="news-other__mobile-link button button--bordered" href="press-center.html">Смотреть все</a>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

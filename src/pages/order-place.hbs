@@ -1,0 +1,20 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="order-place js-section-animate">
+            <div class="container">
+                <div class="order-place__wrapper">
+                    <h1 class="order-place__title">
+                        Заказ №901 от 16.02.2021 <span>оформлен</span>
+                    </h1>
+                    <p class="order-place__desc">
+                        После сборки и передачи заказа в службу доставки, на вашу почту будет выслан трек-номер для отслеживания.
+                    </p>
+                    <a class="order-place__link button button--black" href="catalog.html">В каталог</a>
+                </div>
+            </div>
+        </section>
+        {{> basket-popular }}
+
+    {{/content}}
+{{/extend}}

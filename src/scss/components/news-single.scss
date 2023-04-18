@@ -1,0 +1,121 @@
+.news-single {
+  padding: 9.2rem 0;
+
+  opacity: 0;
+
+  @include breakpoint(tablet) {
+    padding: 1.2rem 0 8rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 1.2rem 0 6.4rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0 0 4.8rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: flex-start;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 3.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2.4rem;
+    }
+
+  }
+
+  &__back-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    grid-column: span 2;
+
+    font: var(--text-t3);
+
+    @include breakpoint(tablet) {
+      font: var(--other-2);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      grid-column: span 1;
+    }
+
+    svg {
+      width: 2.8rem;
+      height: 1.7rem;
+    }
+  }
+
+  &__content {
+    grid-column: span 10;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+    }
+  }
+
+  &__time {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.6rem;
+    padding: 0 2rem;
+    margin-bottom: 2.8rem;
+
+    border-radius: 11.2rem;
+    background-color: var(--gray-color);
+
+    font: var(--regular) 1.6rem/110% var(--main-ff);
+
+    @include breakpoint(mobile) {
+      height: 2rem;
+      padding: 0 0.7rem;
+      margin-bottom: 2rem;
+
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 7.2rem;
+    font: var(--title-h1);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 6.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.5rem;
+    }
+
+  }
+
+  .mailing {
+    margin-top: 16rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 10rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 7rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 4.5rem;
+    }
+  }
+}

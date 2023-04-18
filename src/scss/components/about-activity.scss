@@ -1,0 +1,266 @@
+.about-activity {
+  padding-bottom: 16rem;
+
+  opacity: 0;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 9rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
+  &__inner {
+    padding: 13rem 0 11.5rem;
+
+    background-color: var(--gray-color);
+    border-radius: 2rem;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      padding: 9rem 4rem 9rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 6rem 3rem 6rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 4rem 2rem 4.4rem;
+      border-radius: 1.4rem;
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    margin-bottom: 11rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 9rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 7rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 5.5rem;
+    }
+  }
+
+  &__header-left {
+    grid-column: 2 / 8;
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+
+    font: var(--other);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__subtitle {
+    max-width: 75rem;
+
+    font: var(--title-h2);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5.5rem;
+    }
+
+    span {
+      color: rgba(28, 28, 28, 0.2);
+    }
+  }
+
+  &__header-right {
+    grid-column: 9 / -1;
+
+    @include breakpoint(tablet) {
+      align-self: flex-end;
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 22.2rem;
+    margin-top: 4.6rem;
+
+    font: var(--text-t2);
+
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      right: -14.4rem;
+      top: -3.7rem;
+
+      width: 29.9rem;
+      height: 29.6rem;
+
+      background: url("../img/about-activity-bg.svg") no-repeat center;
+      background-size: contain;
+
+      @include breakpoint(tablet) {
+        top: -3.5rem;
+        right: -8rem;
+
+        width: 25rem;
+        height: 25rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 21rem;
+        height: 21rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 18.4rem;
+        height: 18.4rem;
+      }
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+
+  &__img-block {
+    grid-column: 2 / 8;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      max-width: 50rem;
+      margin-bottom: 5.8rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    width: 100%;
+    padding-top: 116.95%;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+      padding-top: 116.83%;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__features {
+    grid-column: 9 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-right: 2rem;
+
+    @include breakpoint(tablet) {
+      gap: 3.5rem;
+      margin-right: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+
+  }
+
+  &__feature-title {
+    font: var(--regular) 9rem/100% var(--main-ff);
+
+    @include breakpoint(tablet) {
+      font-size: 8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 7rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 6rem;
+    }
+
+  }
+
+  &__feature-title-desc {
+    display: inline-block;
+    margin-top: -0.5rem;
+    margin-bottom: 2.4rem;
+
+    font: var(--title-h3);
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      max-width: 29rem;
+      margin-top: 1.2rem;
+
+      font-size: 3rem;
+    }
+  }
+
+  &__feature-text {
+    max-width: 24rem;
+    font: var(--regular) 1.6rem/100% var(--main-ff);
+  }
+}

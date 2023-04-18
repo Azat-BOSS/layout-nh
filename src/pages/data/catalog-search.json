@@ -1,0 +1,126 @@
+{
+  "title": "Результат поиска",
+  "breadcrumbs": [
+    {
+      "link": "index.html",
+      "text": "Главная"
+    },
+    {
+      "link": "catalog-search.html",
+      "text": "Результат поиска"
+    }
+  ],
+  "catalog": [
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации.",
+      "hit": true
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации."
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации.",
+      "hit": true
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации."
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации.",
+      "hit": true
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    },
+    {
+      "img": "img/catalog-1.jpg",
+      "imgWebp": "img/catalog-1.webp",
+      "img2": "img/catalog-2.jpg",
+      "imgWebp2": "img/catalog-2.webp",
+      "title": "Aurum",
+      "price": "3 990 ₽",
+      "text": "Нормализует структурно-функциональные процессы в соединительной ткани, способствует регенерации."
+    },
+    {
+      "img": "img/catalog-2.jpg",
+      "imgWebp": "img/catalog-2.webp",
+      "img2": "img/catalog-1.jpg",
+      "imgWebp2": "img/catalog-1.webp",
+      "title": "Antiparazit 2",
+      "price": "2 990 ₽",
+      "text": "Для поджелудочной железы"
+    }
+  ]
+}

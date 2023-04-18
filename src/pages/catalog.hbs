@@ -1,0 +1,99 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="catalog">
+            <div class="container">
+                <div class="catalog__wrapper">
+                    <header class="catalog__header js-section-animate">
+                        {{> breadcrumbs data=breadcrumbs }}
+                        <div class="catalog__title-wrapper">
+                            <h1 class="catalog__title">Каталог</h1>
+                        </div>
+                        <div class="catalog__desc">
+                            <p>
+                                В нашем ассортименте более 300 полезных продуктов, приготовленных специально для вас
+                            </p>
+                        </div>
+                        <div class="catalog__categories js-categories">
+                            <ul class="catalog__categories-list js-categories-list">
+                                {{#each categories }}
+                                    <li class="catalog__categories-item">
+                                        <input class="catalog__categories-radio visually-hidden js-categories-item" data-desc="testtesttesttest vtesttesttesttest test test testtest test test test test" type="radio" name="categories" id="categories{{this.id}}">
+                                        <label class="catalog__categories-label tag" for="categories{{this.id}}">
+                                            <svg>
+                                                <use xlink:href="#{{this.img}}"></use>
+                                            </svg>
+                                            <span>{{this.text}}</span>
+                                        </label>
+                                    </li>
+                                {{/each}}
+                                <li class="catalog__categories-more-button-block js-categories-select">
+                                    <div class="catalog__categories-more-button button button--bordered js-categories-select-header">
+                                        <svg>
+                                            <use xlink:href="#arrow-down-icon"></use>
+                                        </svg>
+                                        <span>Еще +<span id="categoriesCount">10</span></span>
+                                    </div>
+                                    <div class="catalog__categories-more-button-dropdown">
+                                        <div class="catalog__categories-more-button-dropdown-content">
+                                            {{#each moreCategories }}
+                                                    <div class="catalog__categories-more-button-item">
+                                                        <input class="catalog__categories-more-button-radio visually-hidden js-categories-item" data-desc="testtesttesttest vtesttesttesttest test test testtest test test test test" type="radio" name="categories" id="categories{{this.id}}">
+                                                        <label class="catalog__categories-more-button-label tag" for="categories{{this.id}}">
+                                                            <svg>
+                                                                <use xlink:href="#{{this.img}}"></use>
+                                                            </svg>
+                                                            <span>{{this.text}}</span>
+                                                        </label>
+                                                    </div>
+                                            {{/each}}
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="catalog__categories-more-button-block catalog__categories-more-button-block--mobile js-categories-select">
+                                <div class="catalog__categories-more-button button button--bordered js-categories-select-header">
+                                    <svg>
+                                        <use xlink:href="#arrow-down-icon"></use>
+                                    </svg>
+                                    <span>Категории</span>
+                                </div>
+                                <div class="catalog__categories-more-button-dropdown">
+                                    <div class="catalog__categories-more-button-dropdown-header">
+                                        <span>Категории</span>
+                                        <button class="catalog__categories-more-button-close js-categories-select-close" aria-label="Закрыть">
+                                            <svg>
+                                                <use xlink:href="#close-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="catalog__categories-more-button-dropdown-content">
+                                        {{#each moreCategoriesMobile }}
+                                            <div class="catalog__categories-more-button-item">
+                                                <input class="catalog__categories-more-button-radio visually-hidden js-categories-item js-categories-item-mobile" data-desc="testtesttesttest vtesttesttesttest test test testtest test test test test" type="radio" name="categories" id="categories{{this.id}}">
+                                                <label class="catalog__categories-more-button-label tag" for="categories{{this.id}}">
+                                                    <svg>
+                                                        <use xlink:href="#{{this.img}}"></use>
+                                                    </svg>
+                                                    <span>{{this.text}}</span>
+                                                </label>
+                                            </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    {{> catalog-filter }}
+                    {{> catalog-list data=catalog }}
+                    {{> cards-navigation }}
+                </div>
+            </div>
+        </section>
+        <section class="catalog-post js-section-animate">
+            <div class="container">
+                {{> post }}
+            </div>
+        </section>
+    {{/content}}
+{{/extend}}

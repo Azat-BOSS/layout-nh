@@ -1,0 +1,542 @@
+<div class="modal modal-distributor js-modal js-modal-distributor fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" aria-label="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <h3 class="modal-distributor__title">Хочу стать дистрибьютором</h3>
+                <form class="modal-distributor__form" data-need-validation="true" action="#">
+                    <div class="modal-distributor__inputs">
+                        <div class="modal-distributor__input-wrapper input-wrapper">
+                            <input class="modal-distributor__input input"
+                                   data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim" type="text" name="distributorName"
+                                   id="distributorName" required>
+                            <label class="modal-distributor__label" for="distributorName">Фамилия Имя</label>
+                        </div>
+                        <div class="modal-distributor__input-wrapper input-wrapper">
+                            <input class="modal-distributor__input input js-phone-input" type="tel"
+                                   name="distributorPhone" id="distributorPhone" required>
+                            <label class="modal-distributor__label" for="distributorPhone">Номер телефона</label>
+                        </div>
+                        <div class="modal-distributor__input-wrapper input-wrapper">
+                            <input class="modal-distributor__input input" type="email" name="distributorMail"
+                                   id="distributorMail" required>
+                            <label class="modal-distributor__label" for="distributorMail">Почта</label>
+                        </div>
+                        <div class="modal-distributor__input-wrapper input-wrapper">
+                            <input class="modal-distributor__input input"
+                                   data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim" type="text" name="distributorCity"
+                                   id="distributorCity" required>
+                            <label class="modal-distributor__label" for="distributorCity">Город</label>
+                        </div>
+                    </div>
+                    <div class="modal-distributor__form-footer">
+                        <button class="modal-distributor__button button button--bordered" type="submit">Отправить
+                        </button>
+                        <div class="modal-distributor__checkbox-container">
+                            <div class="modal-distributor__checkbox-block">
+                                <input type="checkbox" class="modal-distributor__checkbox checkbox"
+                                       name="distributorConfidence" id="distributorConfidence" required>
+                                <label class="modal-distributor__checkbox-label" for="distributorConfidence">
+                                    <span><span>Я согласен(а) на обработку&nbsp;</span><a href="#" download="">персональных данных</a></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-filter js-modal js-modal-filter fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <h3 class="modal-filter__title">Все фильтры</h3>
+                <form class="modal-filter__form js-filter-form" action="#">
+                    <div class="modal-filter__checkboxes-block">
+                        <h4 class="modal-filter__checkboxes-title">Сортировка</h4>
+                        <div class="modal-filter__checkboxes">
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="checkbox" name="mobileFilterSort1"
+                                       id="mobileFilterSort1">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterSort1">Новинки</label>
+                            </div>
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="checkbox" name="mobileFilterSort2"
+                                       id="mobileFilterSort2">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterSort2">Всегда
+                                    пригодиться</label>
+                            </div>
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="checkbox" name="mobileFilterSort3"
+                                       id="mobileFilterSort3">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterSort3">Хит продаж</label>
+                            </div>
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="checkbox" name="mobileFilterSort4"
+                                       id="mobileFilterSort4">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterSort4">Скидка
+                                    месяца</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-filter__checkboxes-block">
+                        <h4 class="modal-filter__checkboxes-title">Сортировка</h4>
+                        <div class="modal-filter__checkboxes">
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="radio" name="mobileFilterSortRadio"
+                                       id="mobileFilterSortRadio1">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterSortRadio1">Не сортировать</label>
+                            </div>
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="radio" name="mobileFilterSortRadio"
+                                       id="mobileFilterSortRadio2">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterSortRadio2">По убыванию
+                                    По убыванию</label>
+                            </div>
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="radio" name="mobileFilterSortRadio"
+                                       id="mobileFilterSortRadio3">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterSortRadio3">По возрастанию</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-filter__checkboxes-block">
+                        <h4 class="modal-filter__checkboxes-title">Наличие товара</h4>
+                        <div class="modal-filter__checkboxes">
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="checkbox" name="mobileFilterHave1"
+                                       id="mobileFilterHave1">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterHave1">Есть в
+                                    наличии</label>
+                            </div>
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="checkbox" name="mobileFilterHave2"
+                                       id="mobileFilterHave2">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterHave2">Нет в
+                                    наличии</label>
+                            </div>
+                            <div class="modal-filter__checkbox-wrapper">
+                                <input class="checkbox visually-hidden" type="checkbox" name="mobileFilterHave3"
+                                       id="mobileFilterHave3">
+                                <label class="modal-filter__checkbox-label" for="mobileFilterHave3">Под заказ</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-filter__price js-price-container">
+                        <span class="modal-filter__price-desc">Цена:</span>
+                        <div class="modal-filter__price-range js-price-range" data-min="2800" data-max="39999" data-start-value="8000,30000"></div>
+                        <div class="modal-filter__price-inputs">
+                            <div class="modal-filter__price-input-wrapper">
+                                <input class="modal-filter__price-input js-filter-price price-0" min="2800" max="39999"
+                                       type="number" name="catalogPriceStart" value="8000" data-start-value="8000">
+                                <span>₽</span>
+                            </div>
+                            <div class="modal-filter__price-input-wrapper">
+                                <input class="modal-filter__price-input js-filter-price price-1" min="2800" max="39999"
+                                       type="number" name="catalogPriceEnd" value="30000" data-start-value="30000">
+                                <span>₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="switch">
+                        <input class="switch__checkbox visually-hidden" checked name="mobileFilterPromotion"
+                               id="mobileFilterPromotion" type="checkbox">
+                        <label class="switch__label" for="mobileFilterPromotion">
+                            <span>Товары по акции</span>
+                            <span class="switch__label-switch"></span>
+                        </label>
+                    </div>
+                    <div class="switch">
+                        <input class="switch__checkbox visually-hidden" checked name="mobileFilterPresent"
+                               id="mobileFilterPresent" type="checkbox">
+                        <label class="switch__label" for="mobileFilterPresent">
+                            <span>Товары с подарками</span>
+                            <span class="switch__label-switch"></span>
+                        </label>
+                    </div>
+                    <button class="modal-filter__reset js-filter-reset visually-hidden" type="reset" aria-label="Закрыть">
+                        <svg>
+                            <use xlink:href="#close-icon"></use>
+                        </svg>
+                        <span>Сбросить</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal modal-click js-modal js-modal-click fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <span class="modal-click__schedule">график работы с 09:00 -18:00</span>
+                <h3 class="modal-click__title">Покупка в 1 клик</h3>
+                <p class="modal-click__desc">
+                    Укажите свои контактные данныи мы свяжемся с вами в ближайшее время.
+                </p>
+                <form class="modal-click__form" data-need-validation="true" action="#">
+                    <div class="modal-click__input-wrapper input-wrapper">
+                        <input class="modal-click__input input input--green"
+                               data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim" type="text" name="clickName"
+                               id="clickName" required>
+                        <label class="modal-click__label" for="clickName">Имя</label>
+                    </div>
+                    <div class="modal-click__input-wrapper  input-wrapper">
+                        <input class="modal-click__input input input--green js-phone-input" type="tel" name="clickPhone"
+                               id="clickPhone" required>
+                        <label class="modal-click__label" for="clickPhone">Телефон</label>
+                    </div>
+                    <button class="modal-click__button button button--fill-white" type="submit">Отправить заказ</button>
+                    <p class="modal-click__confidence">
+                        Нажимая “Отправить” вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-review js-modal js-modal-review">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <div class="modal-review__wrapper">
+                    <div class="modal-review__slider-block">
+                        <div class="modal-review__slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each reviewGallery }}
+                                    <div class="modal-review__slide swiper-slide">
+                                        <img src="{{this.img}}" alt="Фото товара">
+                                    </div>
+                                {{/each}}
+                            </div>
+                            {{> slider-navigation }}
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="modal-review__gallery swiper">
+                            <div class="modal-review__gallery-wrapper swiper-wrapper">
+                                {{#each reviewGallery }}
+                                    <div class="modal-review__gallery-slide swiper-slide">
+                                        <img src="{{this.img}}" alt="Фото товара">
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="modal-review__content fix-blocks">
+                        <div class="modal-review__author">
+                            <div class="modal-review__author-img">
+                                <img class="lazyload" data-src="img/reviews-1.jpg" alt="Фото автора">
+                            </div>
+                            <div class="modal-review__author-content">
+                                <cite class="modal-review__author-name">Мирослава</cite>
+                                <span class="modal-review__author-resume">28 лет, Казань</span>
+                            </div>
+                        </div>
+                        <div class="modal-review__text">
+                            <p>
+                                Добрый день, друзья!! Делюсь результатом применения cordis и vasis, 2 марта у мужа
+                                случился инфаркт, вставили стенд, был на реабилитации и в конце марта был уже дома.
+                            </p>
+                            <p>
+                                Сразу начали использовать эти два продукта по тем рекомендациям, что дают наши
+                                специалисты: сначала по 2-3 капли 2 раза в день, утром и вечером. Из фармопрепаратов
+                                применяем противотромбовые и регулирующие пульс.
+                            </p>
+                            <p>
+                                Вчера сделали ЭКГ как сказала участковый терапевт, всё норм, даже не отметили, что был
+                                инфаркт.Огромная благодарность всем, кто создаёт и продвигает эти продукты.
+                            </p>
+                            <p>
+                                Продолжаем восстановления, ещё есть с чем поработать.Всем здоровья, оптимизма, веры в
+                                то, что мы на правильном пути!
+                            </p>
+                        </div>
+                        <div class="modal-review__product">
+                            <div class="modal-review__product-img">
+                                <img class="lazyload" src="img/reviews-product-1.jpg" alt="Фото продукта">
+                            </div>
+                            <div class="modal-review__product-content">
+                                <span class="modal-review__product-desc">Товар из отзыва</span>
+                                <a class="modal-review__product-link" href="product.html">
+                                    <span>BioPit</span>
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-feedback js-modal js-modal-feedback-product fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <h3 class="modal-feedback__title">Отзыв о товаре</h3>
+                <div class="modal-feedback__product">
+                    <div class="modal-feedback__product-img">
+                        <img class="lazyload" data-src="img/feedback-1.jpg" alt="Фото товара">
+                    </div>
+                    <div class="modal-feedback__product-content">
+                        <h4 class="modal-feedback__product-title">Ocean collagen</h4>
+                        <p class="modal-feedback__product-desc">
+                            Коллаген рыбный для суставов, хрящей, связок и костей, натуральный, гидролизованный
+                        </p>
+                    </div>
+                </div>
+                <form class="modal-feedback__wrapper" data-need-validation enctype="multipart/form-data" action="#">
+                    <div class="modal-feedback__inputs">
+                        <div class="modal-feedback__input-wrapper input-wrapper">
+                            <input class="modal-feedback__input input" type="text" name="feedbackProductName" id="feedbackProductName" required>
+                            <label class="modal-feedback__label" for="feedbackProductName">Имя</label>
+                        </div>
+                        <div class="modal-feedback__input-wrapper input-wrapper">
+                            <input class="modal-feedback__input input js-phone-input" type="tel" name="feedbackProductPhone" id="feedbackProductPhone" required>
+                            <label class="modal-feedback__label" for="feedbackProductPhone">Телефон</label>
+                        </div>
+                        <div class="modal-feedback__input-wrapper input-wrapper">
+                            <input class="modal-feedback__input input" type="email" name="feedbackProductMail" id="feedbackProductMail" required>
+                            <label class="modal-feedback__label" for="feedbackProductMail">Почта</label>
+                        </div>
+                        <div class="modal-feedback__input-wrapper modal-feedback__input-wrapper--textarea input-wrapper">
+                            <textarea class="modal-feedback__textarea input" name="feedbackProductComment" id="feedbackProductComment" required></textarea>
+                            <label class="modal-feedback__label" for="feedbackProductComment">Отзыв</label>
+                        </div>
+                    </div>
+                    <div class="files js-dropzone-container">
+                        <div class="files__wrapper">
+                            <div class="files__form dropzone js-dropzone">
+
+                            </div>
+                            <div class="files__content js-dropzone-content">
+                                <p class="files__desc">
+                                    Добавьте фото нажав&nbsp;на кнопку <span>или же перетащите в эту область</span>
+                                </p>
+                                <span class="files__condition">до 4 изображений в формате PNG, JPEG.</span>
+                            </div>
+                        </div>
+                        <div class="files__progress js-dropzone-progress-block">
+                            <span class="files__progress-counter">
+                                <span class="files__progress-count js-dropzone-progress-count">03</span> / <span class="dropzone-progress-total">04</span>
+                            </span>
+                            <div class="files__progress-bar">
+                                <div class="files__progress-bar-fill js-dropzone-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-feedback__button button button--green">Отправить отзыв</button>
+                    <p class="modal-feedback__confidence">
+                        Нажимая кнопку «Отправить отзыв» вы соглашаетесь с <a href="#">договором — офертой</a> и с <a href="#">политикой обработки персональных&nbsp;данных</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-feedback js-modal js-modal-feedback fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <h3 class="modal-feedback__title">Ваш отзыв</h3>
+                <form class="modal-feedback__wrapper" enctype="multipart/form-data" data-need-validation action="#">
+                    <div class="modal-feedback__inputs">
+                        <div class="modal-feedback__input-wrapper input-wrapper">
+                            <input class="modal-feedback__input input" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim" type="text" name="feedbackName" id="feedbackName" required>
+                            <label class="modal-feedback__label" for="feedbackName">Имя</label>
+                        </div>
+                        <div class="modal-feedback__input-wrapper input-wrapper">
+                            <input class="modal-feedback__input input js-phone-input" type="tel" name="feedbackPhone" id="feedbackPhone" required>
+                            <label class="modal-feedback__label" for="feedbackPhone">Телефон</label>
+                        </div>
+                        <div class="modal-feedback__input-wrapper input-wrapper">
+                            <input class="modal-feedback__input input" type="email" name="feedbackMail" id="feedbackMail" required>
+                            <label class="modal-feedback__label" for="feedbackMail">Почта</label>
+                        </div>
+                        <div class="modal-feedback__input-wrapper modal-feedback__input-wrapper--textarea input-wrapper">
+                            <textarea class="modal-feedback__textarea input" name="feedbackComment" id="feedbackComment" required></textarea>
+                            <label class="modal-feedback__label" for="feedbackComment">Отзыв</label>
+                        </div>
+                    </div>
+                    <div class="files js-dropzone-container">
+                        <div class="files__wrapper">
+                            <div class="files__form dropzone js-dropzone"></div>
+                            <div class="files__content js-dropzone-content">
+                                <p class="files__desc">
+                                    Добавьте фото нажав&nbsp;на кнопку <span>или же перетащите в эту область</span>
+                                </p>
+                                <span class="files__condition">до 4 изображений в формате PNG, JPEG.</span>
+                            </div>
+                        </div>
+                        <div class="files__progress js-dropzone-progress-block">
+                            <span class="files__progress-counter">
+                                <span class="files__progress-count js-dropzone-progress-count">03</span> / <span class="dropzone-progress-total">04</span>
+                            </span>
+                            <div class="files__progress-bar">
+                                <div class="files__progress-bar-fill js-dropzone-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-feedback__button button button--green">Отправить отзыв</button>
+                    <p class="modal-feedback__confidence">
+                        Нажимая кнопку «Отправить отзыв» вы соглашаетесь с <a href="#">договором — офертой</a> и с <a href="#">политикой обработки персональных&nbsp;данных</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-answer js-modal js-modal-error fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <h3 class="modal-answer__title">Возникла ошибка</h3>
+                <p class="modal-answer__desc">Пожалуйста, проверьте данные и повторите попытку</p>
+                <a href="#" class="modal-answer__link button button--green js-repeat-button">Повторить попытку</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-answer js-modal js-modal-success">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <h3 class="modal-answer__title">Отлично!</h3>
+                <p class="modal-answer__desc">Ваши данные успешно отправлены</p>
+                <button class="modal-answer__link button button--green js-close-modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-answer-review js-modal js-modal-success-review fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <h3 class="modal-answer-review__title">Спасибо за отзыв!</h3>
+                <p class="modal-answer-review__desc">Отзыв появиться на сайте после модерации</p>
+                <a class="modal-answer-review__link button button--green" href="index.html">На главную</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-success-click js-modal js-modal-success-click fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <h3 class="modal-success-click__title">Спасибо за заявку!</h3>
+                <p class="modal-success-click__desc">Мы свяжемся с вами в ближайшее время</p>
+                <a class="modal-success-click__link button button--fill-white" href="index.html">На главную</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-present js-modal js-modal-present fix-blocks">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <span class="modal-present__condition">
+                    При заказе от <span>6 000₽</span>
+                </span>
+                <h3 class="modal-present__title">Вам подарок</h3>
+                <p class="modal-present__desc">При уменьшении суммы заказа подарок будет учитываться в корзине за полную стоимость</p>
+                <div class="modal-present__product">
+                    <div class="modal-present__product-img">
+                        <picture>
+                            <source data-srcset="img/modal-present-1.webp" type="image/webp">
+                            <img class="lazyload" data-src="img/modal-present-1.jpg" alt="Фото товара">
+                        </picture>
+                    </div>
+                    <h4 class="modal-present__product-title">Skin Life</h4>
+                    <p class="modal-present__product-desc">Маска для лица</p>
+                </div>
+                <button class="modal-present__button button button--green js-close-modal">
+                    Отлично, спасибо!
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+
+    @include breakpoint(tablet) {
+
+    }
+
+    @include breakpoint(small-tablet) {
+
+    }
+
+    @include breakpoint(mobile) {
+
+    }
+
+-->

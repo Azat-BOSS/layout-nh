@@ -1,0 +1,149 @@
+.promo {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8.2rem;
+  max-width: 75rem;
+  padding: 3.6rem 4rem;
+
+  border-radius: 2rem;
+  background-color: var(--gray-color);
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    gap: 6rem;
+    padding: 3.2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    width: 100%;
+    max-width: 50rem;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    gap: 2.3rem;
+    padding: 2.4rem;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    left: 22.4rem;
+    bottom: -8.4rem;
+
+    width: 15.4rem;
+    height: 15.4rem;
+
+    background: url("../img/promo-bg.svg") no-repeat center;
+    background-size: contain;
+
+    @include breakpoint(small-tablet) {
+      top: -8.7rem;
+      right: -7.3rem;
+      left: auto;
+      bottom: auto;
+
+      width: 19.8rem;
+      height: 19.8rem;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 24.7rem;
+
+    @include breakpoint(mobile) {
+      max-width: 22rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+    font: var(--title-h4);
+  }
+
+  &__desc {
+    max-width: 20rem;
+
+    font: var(--text-t2);
+    color: rgba(28, 28, 28, 0.5);
+  }
+
+  &__form {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 1.8rem;
+
+    @include breakpoint(small-tablet) {
+      margin-top: 0;
+      width: 100% ;
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    padding: 0 2.4rem;
+    padding-right: 6rem;
+
+    border-radius: 8rem;
+    background-color: #fff;
+
+    font: var(--text-t1);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__copy-button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    
+    border-radius: 50%;
+    background-color: var(--primary-color);
+
+    color: #fff;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__tooltip {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    height: 5.2rem;
+    padding: 0 2.4rem;
+
+    border-radius: 8rem;
+    background-color: var(--gray-color);
+    opacity: 0;
+    visibility: hidden;
+
+    font: var(--text-t2);
+
+    transition: 0.5s;
+  }
+}

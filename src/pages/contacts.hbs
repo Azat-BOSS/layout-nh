@@ -1,0 +1,86 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="contacts">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                <div class="contacts__title-wrapper">
+                    <h1 class="contacts__title js-title-animate">Контакты</h1>
+                </div>
+                <div class="contacts__content js-section-animate">
+                    <div class="contacts__img-block">
+                        <div class="contacts__img">
+                            <picture>
+                                <source data-srcset="img/contacts-1.webp" type="image/webp">
+                                <img class="lazyload" data-src="img/contacts-1.jpg" alt="Фото здания">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="contacts__info">
+                        <div class="contacts__info-item contacts__info-item--large">
+                            <h3 class="contacts__subtitle">Адрес</h3>
+                            <address class="contacts__address">г. Казань, ул. Восстания 100 к5050</address>
+                        </div>
+                        <div class="contacts__info-item">
+                            <h3 class="contacts__subtitle">Режим работы</h3>
+                            <ul class="contacts__schedule">
+                                {{#each schedule }}
+                                    <li class="contacts__schedule-item">{{this.text}}</li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div class="contacts__info-item contacts__info-item--socials">
+                            <h3 class="contacts__subtitle">Соц.сети</h3>
+                            <ul class="contacts__socials">
+                                {{#each socials }}
+                                    <li class="contacts__social">
+                                        <a class="contacts__social-link" aria-label="Социальная сеть" href="#">
+                                            <svg>
+                                                <use xlink:href="#{{this.svg}}"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div class="contacts__info-item">
+                            <h3 class="contacts__subtitle">Контакты</h3>
+                            <ul class="contacts__links">
+                                {{#each contactsLinks }}
+                                    <li class="contacts__links-item">
+                                        <a class="contacts__link" href="{{this.link}}">{{this.text}}</a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div class="contacts__info-item">
+                            <h3 class="contacts__subtitle">Реквизиты</h3>
+                            <ul class="contacts__requisites">
+                                {{#each requisites }}
+                                    <li class="contacts__requisites-item">{{this.text}}</li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__map-block js-section-animate">
+                    <div class="contacts__map js-contacts-map" data-coordinates="55.83358745014747,49.04030590101966" data-marker="img/logo-placemarker.svg" data-zoom="15"></div>
+                    <div class="contacts__route">
+                        <div class="contacts__route-img">
+                            <svg>
+                                <use xlink:href="#route-logo"></use>
+                            </svg>
+                        </div>
+                        <div class="contacts__route-content">
+                            <address class="contacts__route-address">ул. Восстания 100 к5050</address>
+                            <span class="contacts__route-city">Казань</span>
+                        </div>
+                        <a class="contacts__route-link button button--bordered" href="https://yandex.ru/maps/?rtext=~55.83358745014747,49.04030590101966" target="_blank">Проложить маршрут</a>
+                    </div>
+                    <a class="contacts__route-link-mobile button button--bordered" href="https://yandex.ru/maps/?rtext=~55.83358745014747,49.04030590101966" target="_blank">Проложить маршрут</a>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

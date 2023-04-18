@@ -1,0 +1,168 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="about-intro js-section-animate">
+            <div class="container">
+                <div class="about-intro__inner lazyload" data-bg="img/about-intro-bg.jpg" style="background-repeat: no-repeat; background-position: center; background-size: cover">
+                    {{> breadcrumbs data=breadcrumbs }}
+                    <h1 class="about-intro__title">Natural Health</h1>
+                    <div class="about-intro__desc">
+                        <p>
+                            Первая в России компания-производитель, разработавшая энергоинформационное направление,
+                            которому нет аналогов в мире.
+                        </p>
+                    </div>
+                    <a class="about-intro__video" data-src="https://youtu.be/Fcc0VRy19VM" data-fancybox>
+                        <div class="about-intro__video-button">
+                            <div class="about-intro__video-button-round">
+                                <svg>
+                                    <use xlink:href="#video-icon"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="about-intro__video-desc">
+                        Смотреть видео о компании
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="about-activity js-section-animate">
+            <div class="container">
+                <div class="about-activity__inner">
+                    <header class="about-activity__header">
+                        <div class="about-activity__header-left">
+                            <h2 class="about-activity__title">Деятельность компании</h2>
+                            <h3 class="about-activity__subtitle">
+                                Natural Health — российская компания-производитель продукции из природного сырья,
+                                <span>направленной на оздоровление человека и улучшения качеств его жизни.</span>
+                            </h3>
+                        </div>
+                        <div class="about-activity__header-right">
+                            <div class="about-activity__text">
+                                <p class="js-minimize-width">
+                                    Штаб-квартира и основные производственные мощности компании расположены в городе
+                                    Казань,
+                                    Республика Татарстан.
+                                </p>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="about-activity__body">
+                        <div class="about-activity__img-block">
+                            <div class="about-activity__img">
+                                <picture>
+                                    <source data-srcset="img/about-activity-1.webp" type="image/webp">
+                                    <img class="lazyload" data-src="img/about-activity-1.jpg" alt="Фото">
+                                </picture>
+                            </div>
+                        </div>
+                        <ul class="about-activity__features">
+                            {{#each features }}
+                                <li class="about-activity__feature">
+                                    <h3 class="about-activity__feature-title">{{this.title}}</h3>
+                                    <span class="about-activity__feature-title-desc">{{this.desc}}</span>
+                                    <p class="about-activity__feature-text">{{this.text}}</p>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-production js-section-animate">
+            <div class="container">
+                <div class="about-production__inner">
+                    <h2 class="about-production__title">Производство компании</h2>
+                    <h3 class="about-production__subtitle">
+                        Основным родом деятельности компании является производство оздоровительной продукции на основе
+                        природного сырья,
+                        <span>добытого на территории Республики Татарстан и Европейской части России.</span>
+                    </h3>
+                    <div class="about-production__text">
+                        <p>
+                            Вторым немаловажным направлением деятельности является производство анатомических изделий из
+                            высокотехнологичного материала.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-blockquote js-section-animate">
+            <div class="container">
+                <div class="about-blockquote__inner">
+                    <div class="about-blockquote__top">
+                        <span class="about-blockquote__position">Собственник и генеральный директор компании Natural Health</span>
+                        <cite class="about-blockquote__name">Патраков Сергей Анатольевич</cite>
+                    </div>
+                    <div class="about-blockquote__text">
+                        <p>
+                            Я взял за основу симбиоз многолетних оздоровительных традиций и современных технологий. Привлек
+                            консультантов и технологов-специалистов высокого уровня. Мне удалось создать первую линейку
+                            энергоинформационных препаратов Natural Health и в 2017 году вывести их сначала на рынок России,
+                            а затем и других стран.
+                        </p>
+                    </div>
+                    <picture>
+                        <source data-srcset="img/about-blockquote-1.webp" type="image/webp">
+                        <img class="about-blockquote__img lazyload" data-src="img/about-blockquote-1.png" alt="Фото директора">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="about-team">
+            <div class="container">
+                <div class="about-team__title-wrapper">
+                    <h2 class="about-team__title js-title-animate">Команда профессионалов</h2>
+                </div>
+                <div class="about-team__slider-container js-init-slider-container">
+                    <div class="about-team__slider swiper js-init-slider js-section-animate" data-slides-breakpoints="100:2.2,641:3.2,769:4,1025:5" data-spaces="100:12,641:20,769:20,1025:20">
+                        <div class="swiper-wrapper">
+                            {{#each team }}
+                                <div class="about-team__slide swiper-slide">
+                                    <div class="about-team__img">
+                                        <picture>
+                                            <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото сотрудника">
+                                        </picture>
+                                    </div>
+                                    <h3 class="about-team__name">Патраков Сергей Анатольевич</h3>
+                                    <span class="about-team__position">Генеральный директор</span>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{> slider-navigation mod='slider-navigation--small' smallArrow=true }}
+                </div>
+            </div>
+        </section>
+        <section class="about-achievements">
+            <div class="container">
+                <div class="about-achievements__title-wrapper">
+                    <h2 class="about-achievements__title js-title-animate">Достижения компании</h2>
+                </div>
+                <div class="about-achievements__slider-container js-init-slider-container">
+                    <div class="about-achievements__slider swiper js-init-slider js-section-animate" data-slides-breakpoints="100:2.2,641:2.5,769:3,1025:4" data-spaces="100:12,641:20,769:20,1025:20">
+                        <div class="swiper-wrapper">
+                            {{#each achievements }}
+                                <div class="about-achievements__slide swiper-slide">
+                                    <div class="about-achievements__slide-img">
+                                        <picture>
+                                            <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото достижения">
+                                        </picture>
+                                    </div>
+                                    <time class="about-achievements__slide-date">{{this.date}}</time>
+                                    <h3 class="about-achievements__slide-title">{{this.title}}</h3>
+                                    <p class="about-achievements__slide-text">{{this.text}}</p>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{> slider-navigation mod='slider-navigation--small' smallArrow=true }}
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

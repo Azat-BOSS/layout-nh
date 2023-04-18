@@ -1,0 +1,39 @@
+{
+  "title": "Отзывы",
+  "reviews": [
+    {
+      "photos": true,
+      "product": true
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+      "photos": true,
+      "product": true
+    },
+    {
+
+    }
+  ],
+  "reviewGallery": [
+    {
+      "img": "img/review-modal-1.jpg"
+    },
+    {
+      "img": "img/review-modal-2.jpg"
+    },
+    {
+      "img": "img/review-modal-1.jpg"
+    },
+    {
+      "img": "img/review-modal-3.jpg"
+    }
+  ]
+}

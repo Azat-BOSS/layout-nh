@@ -1,0 +1,38 @@
+.product-popular {
+  padding-bottom: 10rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 7rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
+  &__title-wrapper {
+    padding-bottom: 0.6rem;
+    margin-bottom: 6.4rem;
+
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  &__title {
+    font: var(--title-h1);
+  }
+}

@@ -1,0 +1,177 @@
+.about-blockquote {
+  padding-bottom: 12rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
+  &__inner {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 66.6rem;
+    padding: 7.4rem 8rem 9rem;
+
+    background-color: var(--gray-color);
+    border-radius: 2rem;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      padding: 6rem 6rem 7rem;
+      min-height: 60rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 50rem;
+      padding: 5rem 4rem 5.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 43rem;
+      padding: 4rem 2.4rem 3.2rem;
+
+      border-radius: 1rem;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__position {
+    max-width: 35rem;
+    margin-bottom: 2.4rem;
+
+    font: var(--other);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(28, 28, 28, 0.3);
+
+    @include breakpoint(tablet) {
+      max-width: 30rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      max-width: 25rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 16rem;
+    }
+  }
+
+  &__name {
+    max-width: 52rem;
+    margin-bottom: 3rem;
+
+    font: var(--title-h1);
+
+    @include breakpoint(mobile) {
+      max-width: 27rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 47rem;
+    margin-top: auto;
+
+    font: var(--title-h4);
+
+    @include breakpoint(tablet) {
+      max-width: 36rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 22rem;
+      font-size: 1.4rem;
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      content: '“';
+
+      position: absolute;
+      left: -2.4rem;
+      top: -0.8rem;
+
+      font: var(--title-h3);
+
+      @include breakpoint(mobile) {
+        left: 0;
+        top: auto;
+        bottom: 100%;
+      }
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      right: -13.7rem;
+      bottom: -3.3rem;
+
+      width: 19.7rem;
+      height: 18.1rem;
+
+      background: url("../img/director-signature-2.svg") no-repeat center;
+      background-size: contain;
+
+      @include breakpoint(mobile) {
+        right: auto;
+        left: -2rem;
+        top: -8.4rem;
+
+        width: 16.5rem;
+        height: 15.1rem;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 9rem;
+
+    width: 69.8rem;
+    height: auto;
+
+    filter: drop-shadow(0 0.4rem 8rem rgba(0, 0, 0, 0.05));
+
+    @include breakpoint(tablet) {
+      right: -7rem;
+      width: 44.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 37rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 30rem;
+    }
+  }
+}

@@ -1,0 +1,363 @@
+.about-section {
+  padding-bottom: 14rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 4rem;
+  }
+
+  &__inner {
+    padding: 11rem 4rem 4rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    color: #fff;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+      border-radius: 0;
+      background: none !important;
+    }
+  }
+
+  &__top {
+    @media (min-width: 1025px) {
+      background: none !important;
+    }
+
+    @include breakpoint(tablet) {
+      min-height: 54.7rem;
+      padding: 3rem 2rem 2rem;
+
+      border-radius: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      border-radius: 1rem;
+      /*background-position: -15rem 10rem !important;*/
+    }
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+
+    font: var(--regular) 14rem/90% var(--main-ff);
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+      font-size: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3.5rem;
+      font-size: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+      
+      font-size: 8rem;
+      text-align: left;
+    }
+  }
+
+  &__video-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+    max-width: 14.2rem;
+    margin: 0 auto;
+
+    @include breakpoint(tablet) {
+      justify-content: center;
+      flex-direction: row-reverse;
+      gap: 3.6rem;
+      max-width: none;
+    }
+
+    @include breakpoint(mobile) {
+      justify-content: flex-end;
+      margin-left: 2.2rem;
+    }
+  }
+
+  &__video-img {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.2rem;
+    height: 16.2rem;
+
+    @include breakpoint(tablet) {
+      width: 13rem;
+      height: 13rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 11.5rem;
+      height: 11.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 10.5rem;
+      height: 10.5rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: url("../img/video-link-bg.png") no-repeat center;
+      background-size: cover;
+
+      animation-name: rotation;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    svg {
+      width: 4.4rem;
+      height: 4.4rem;
+      margin-left: 5%;
+
+      @include breakpoint(tablet) {
+        width: 3.8rem;
+        height: 3.8rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+    }
+  }
+
+  &__video-desc {
+    max-width: 13rem;
+    
+    font: var(--text-t1);
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      text-align: left;
+      max-width: 12rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 11rem;
+    }
+  }
+
+  &__content {
+    max-width: 32.4rem;
+    margin-left: auto;
+    margin-top: -2.8rem;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+      margin-top: 3.2rem;
+
+      color: var(--black-color);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 4rem;
+
+    font: var(--text-t2);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 5.9rem;
+      margin-bottom: 1.2rem;
+
+      overflow: hidden;
+
+      @include maxSizeText(4);
+
+      &.active {
+        height: auto;
+        -webkit-line-clamp: initial;
+      }
+    }
+  }
+
+  &__more-button {
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: block;
+      margin-bottom: 3.2rem;
+
+      font: var(--text-t2);
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+
+    @include breakpoint(tablet) {
+      color: var(--black-color);
+      border-color: var(--black-color);
+    }
+  }
+
+  &__director {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 75.2rem;
+    min-height: 32.5rem;
+    margin-top: -13.5rem;
+    padding: 4rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: var(--gray-color);
+
+    color: var(--black-color);
+
+    @include breakpoint(tablet) {
+      max-width: none;
+      margin-top: 4.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 34.6rem;
+      padding: 2.8rem 2.4rem 3rem;
+
+      border-radius: 1rem;
+    }
+  }
+
+  &__director-img {
+    position: absolute;
+    top: 1.6rem;
+    right: -8.2rem;
+
+    width: 52.7rem;
+
+    @include breakpoint(mobile) {
+      top: auto;
+      right: -7rem;
+      bottom: -12rem;
+
+      width: 31.1rem;
+    }
+  }
+
+  &__director-name {
+    display: block;
+    max-width: 32.6rem;
+    margin-bottom: 2rem;
+
+    font: var(--title-h3);
+
+    @include breakpoint(mobile) {
+      max-width: 20rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__director-position {
+    max-width: 35rem;
+    margin-bottom: 2rem;
+
+    font: var(--other);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.3;
+
+    @include breakpoint(small-tablet) {
+      max-width: 16rem;
+    }
+  }
+
+  &__director-text {
+    position: relative;
+
+    margin-top: auto;
+    padding-top: 0.8rem;
+    padding-left: 2.4rem;
+    max-width: 32.5rem;
+
+    font: var(--text-t2);
+
+    @include breakpoint(mobile) {
+      max-width: 26rem;
+      padding-top: 0;
+    }
+
+    &::before {
+      content: '“';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      font: var(--title-h3);
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: -5.4rem;
+      right: -9.4rem;
+
+      width: 22.3rem;
+      height: 20.3rem;
+
+      background: url("../img/director-signature.svg") no-repeat center;
+      background-size: cover;
+
+      @include breakpoint(small-tablet) {
+        top: auto;
+        right: auto;
+        left: 0;
+        bottom: -1.5rem;
+
+        width: 16.5rem;
+        height: 15.1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__title-wrapper">
+                    <h1 class="reviews__title js-title-animate">Отзывы</h1>
+                </div>
+                <div class="reviews__wrapper js-section-animate">
+                    <div class="reviews__list">
+                        {{#each reviews }}
+                            <blockquote class="reviews__item">
+                                <div class="reviews__item-header">
+                                    <div class="reviews__item-img">
+                                        <picture>
+                                            <source data-srcset="img/reviews-1.webp" type="image/webp">
+                                            <img class="lazyload" data-src="img/reviews-1.jpg" alt="Фото автора">
+                                        </picture>
+                                    </div>
+                                    <div class="reviews__item-info">
+                                        <cite class="reviews__item-name">Мирослава</cite>
+                                        <div class="reviews__item-resume">26 Октября 2022</div>
+                                    </div>
+                                    {{#if photos }}
+                                        <div class="reviews__item-photos-block">
+                                            <span class="reviews__item-photos-desc">Фото товара</span>
+                                            <div class="reviews__item-photos">
+                                                <div class="reviews__item-photo">
+                                                    <img class="lazyload" data-src="img/reviews-photo-1.jpg" alt="Фото товара">
+                                                </div>
+                                                <div class="reviews__item-photo">
+                                                    <span class="reviews__item-photo-count">+3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {{/if}}
+                                </div>
+                                <p class="reviews__item-text">
+                                    Нашла я его случайным образом, покупала белковые батончики (перекусывала ими перед
+                                    тренировкой или после), и вот на батончиках вычитала, что в составе присутствует
+                                    L-карнитин, вроде способствующий улучшению обмена веществ. Нашла я его случайным
+                                    образом, покупала белковы
+                                </p>
+                                <a class="reviews__item-link button button--bordered" href="#review">Читать полностью</a>
+                                {{#if product }}
+                                    <div class="reviews__item-product">
+                                        <div class="reviews__item-product-img">
+                                            <img class="lazyload" data-src="img/reviews-product-1.jpg"
+                                                 alt="Фото продукта">
+                                        </div>
+                                        <div class="reviews__item-product-content">
+                                            <span class="reviews__item-product-desc">Товар из отзыва</span>
+                                            <a class="reviews__item-product-link" href="product.html">
+                                                <span>BioPit</span>
+                                                <svg>
+                                                    <use xlink:href="#slider-arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                {{/if}}
+                            </blockquote>
+                        {{/each}}
+                    </div>
+                    <div class="reviews__add">
+                        <h2 class="reviews__add-title">Более 169 отзывов</h2>
+                        <p class="reviews__add-desc">
+                            Дорожим качеством продукции и репутацией. Благодаря вашей обратной связи мы становимся лучше
+                        </p>
+                        <a class="reviews__add-link button button--green" href="#feedback">Добавить отзыв</a>
+                    </div>
+                </div>
+                <a class="reviews__add-link-mobile js-add-link button button--green" href="#feedback">Добавить отзыв</a>
+                {{> cards-navigation }}
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

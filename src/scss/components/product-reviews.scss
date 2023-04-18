@@ -1,0 +1,9 @@
+.product-reviews {
+  .reviews-section {
+    padding-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 10rem;
+    }
+  }
+}

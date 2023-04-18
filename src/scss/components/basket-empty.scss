@@ -1,0 +1,67 @@
+.basket-empty {
+  padding: 9.2rem 0 8rem;
+
+  opacity: 0;
+
+  @include breakpoint(tablet) {
+    padding: 7rem 0 6.6rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 5rem 0 5.7rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 2.8rem 0 4.6rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+
+    font: var(--title-h1);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__desc {
+    max-width: 49.6rem;
+    margin-bottom: 4rem;
+
+    font: var(--text-t2);
+    text-align: center;
+    color: rgba(28, 28, 28, 0.3);
+
+    @include breakpoint(mobile) {
+      max-width: 29.5rem;
+    }
+  }
+
+  &__link {
+    height: 5.2rem;
+    padding: 0 3.6rem;
+
+    @include breakpoint(tablet) {
+      height: 4.8rem;
+      padding: 0 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 4.2rem;
+      padding: 0 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 3.6rem;
+      padding: 0 1.6rem;
+    }
+  }
+}

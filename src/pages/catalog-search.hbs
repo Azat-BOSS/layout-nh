@@ -1,0 +1,23 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="catalog-search">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                <div class="catalog-search__wrapper">
+                    <div class="catalog-search__title-wrapper">
+                        <h1 class="catalog-search__title js-title-animate">Результат поиска</h1>
+                    </div>
+                    <div class="catalog-search__desc-wrapper">
+                        <span class="catalog-search__desc js-title-animate">По запросу: регенерация</span>
+                    </div>
+                </div>
+                {{> catalog-filter }}
+                {{> catalog-list data=catalog }}
+                {{> cards-navigation }}
+            </div>
+        </section>
+
+
+    {{/content}}
+{{/extend}}

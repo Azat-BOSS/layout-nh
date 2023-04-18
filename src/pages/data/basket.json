@@ -1,0 +1,58 @@
+{
+  "title": "Корзина",
+  "products": [
+    {
+      "img": "img/basket-1.jpg",
+      "imgWebp": "img/basket-1.webp",
+      "title": "Ocean collagen",
+      "text": "Коллаген рыбный для суставов, хрящей, связок и костей, натуральный, гидролизованный."
+    },
+    {
+      "img": "img/basket-2.jpg",
+      "imgWebp": "img/basket-2.webp",
+      "title": "BioPit",
+      "text": "Природный коллаген"
+    },
+    {
+      "img": "img/basket-3.jpg",
+      "imgWebp": "img/basket-3.webp",
+      "title": "Si Complex",
+      "text": "Кремниевый комплекс, способствующий поддержанию здорового вида ногтей, кожи и волос"
+    },
+    {
+      "img": "img/basket-4.jpg",
+      "imgWebp": "img/basket-4.webp",
+      "title": "Zeol",
+      "text": "Адсорбент на все случаи жизни"
+    }
+  ],
+  "proposal": [
+    {
+      "img": "img/present-1.jpg",
+      "imgWebp": "img/present-1.webp",
+      "title": "Макроэлемент",
+      "text": "Нормализует процессы в соединительной ткани"
+    },
+    {
+      "img": "img/present-1.jpg",
+      "imgWebp": "img/present-1.webp",
+      "title": "Макроэлемент",
+      "text": "Нормализует процессы в соединительной ткани"
+    }
+  ],
+  "details": [
+    {
+      "name": "4 товара",
+      "value": "1 250 ₽"
+    },
+    {
+      "name": "Доставка",
+      "value": "250 ₽"
+    },
+    {
+      "name": "Промокод",
+      "value": "–500 ₽",
+      "promocode": true
+    }
+  ]
+}

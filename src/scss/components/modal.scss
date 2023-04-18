@@ -1,0 +1,1518 @@
+.modal {
+  body:not(.loaded) & {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1500;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  &--small {
+    .modal__container {
+      max-width: 65rem  ;
+    }
+  }
+
+  &__container {
+    position: absolute;
+
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 6rem 1.2rem;
+  }
+
+  &__inner {
+    position: relative;
+
+    padding: 6rem;
+
+    border-radius: 2rem;
+    background-color: #FCFDFF;
+
+    @include breakpoint(tablet) {
+      padding: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 4.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 4rem 3.2rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 2rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.2rem;
+    height: 5.2rem;
+    
+    border-radius: 50%;
+    background-color: #fff;
+
+    color: var(--black-color);
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      top: auto;
+      bottom: calc(100% + 1.2rem);
+      right: 0;
+      left: auto;
+
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+
+.modal-distributor {
+  &__title {
+    margin-bottom: 6rem;
+
+    font: var(--title-h2);
+    font-weight: 400;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 23rem;
+      margin: 0 auto 4rem;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__form-footer {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__button {
+    @include breakpoint(mobile) {
+      height: 5.2rem;
+    }
+  }
+
+  &__checkbox-container {
+    position: relative;
+
+    .parsley-errors-list {
+      right: auto;
+      left: 0;
+      top: calc(100% + 0.5rem);
+    }
+  }
+}
+
+.modal-filter {
+  background-color: transparent;
+
+  @include breakpoint(mobile) {
+    justify-content: flex-end;
+  }
+
+  .modal__container {
+    padding: 3rem 3.2rem;
+  }
+
+  .modal__inner {
+    padding: 2.4rem 4rem 3.2rem;
+
+    border-radius: 1.6rem;
+    box-shadow: -0.3rem 1.4rem 5rem 0 rgba(0, 0, 0, 0.13), -0.3rem 0.4rem 0.7rem 0 rgba(0, 0, 0, 0.07);
+
+    @include breakpoint(mobile) {
+      padding: 2.4rem 1.6rem 3.2rem;
+    }
+  }
+
+
+  .modal__close {
+    top: 2.4rem;
+    right: 2.4rem;
+    left: auto;
+
+    width: 2.4rem;
+    height: 2.4rem;
+
+    @include breakpoint(mobile) {
+      right: 1.2rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+
+    font: var(--title-h4);
+    font-size: 2.4rem;
+  }
+
+  &__checkboxes-block {
+    margin-bottom: 2.8rem;
+  }
+
+  &__checkboxes-title {
+    margin-bottom: 1.6rem;
+
+    font: var(--text-t3);
+    color: #BBBBBB;
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  & .modal-filter__checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    font: var(--text-t2);
+    font-size: 1.8rem;
+  }
+
+  &__price {
+    margin-bottom: 4rem;
+  }
+
+  &__price-desc {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+
+    font: var(--text-t3);
+    color: #BBBBBB;
+  }
+
+  &__price-range {
+    margin-bottom: 1.8rem;
+
+    .noUi-handle {
+      background-size: 14px 14px;
+    }
+
+    & .noUi-handle {
+      width: 20px;
+      height: 20px;
+      top: -8px;
+      right: -6px;
+    }
+  }
+
+  &__price-inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-input-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price-input {
+    width: auto;
+
+    font: var(--text-t2);
+    font-size: 1.8rem;
+  }
+
+  .switch:not(:last-of-type) {
+    margin-bottom: 2.4rem;
+  }
+
+  .switch__label {
+    align-items: flex-end;
+  }
+
+  &__reset {
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: 4rem;
+
+    font: var(--other);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}
+
+.modal-click {
+  .modal__container {
+    max-width: 47rem;
+  }
+
+  .modal__inner {
+    padding: 2.8rem 2rem 6.6rem;
+    
+
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+
+    color: #fff;
+
+    @include breakpoint(small-tablet) {
+      padding: 2.8rem 2rem 6rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2.3rem 2rem 5.3rem;
+    }
+  }
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__schedule {
+    align-self: flex-end;
+    margin-bottom: 6rem;
+
+    font: var(--text-t2);
+    opacity: 0.3;
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+    
+    font: var(--title-h2);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__desc {
+    max-width: 30.8rem;
+    margin-bottom: 2.8rem;
+
+    font: var(--text-t2);
+    text-align: center;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 28.2rem;
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  &__form {
+    max-width: 27.8rem;
+
+    @include breakpoint(mobile) {
+      max-width: 32rem;
+      width: 100%;
+    }
+  }
+
+  &__input-wrapper {
+    margin-bottom: 1.6rem;
+
+    &:last-of-type {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  .modal-click__label {
+    left: 2rem;
+
+    font: var(--text-t2);
+
+    &.active {
+      top: 0.2rem;
+    }
+  }
+
+  .parsley-errors-list {
+    right: 0.7rem;
+  }
+
+  &__button {
+    width: 100%;
+    height: 5.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__confidence {
+    max-width: 26.6rem;
+
+    font: var(--text-t3);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+
+    @include breakpoint(mobile) {
+      max-width: 27rem;
+      font-size: 1.2rem;
+    }
+
+    a {
+      text-decoration: underline;
+      
+      transition: 0.3s;
+      
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.modal-review {
+  &--without-img {
+    div.modal__container {
+      max-width: 60rem;
+    }
+
+    button.modal__close {
+      background-color: var(--gray-color);
+    }
+
+    .modal-review__wrapper {
+      display: block;
+    }
+
+    .modal-review__content {
+      max-width: none;
+    }
+  }
+
+  .modal__container {
+    max-width: 126.4rem;
+  }
+
+  .modal__inner {
+    padding: 8rem;
+
+    background-color: #fff;
+    border-radius: 2rem;
+
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+
+    }
+
+    @include breakpoint(mobile) {
+      border-radius: 1.2rem;
+    }
+  }
+
+  .modal__close {
+    top: 3rem;
+    right: 3rem;
+    left: auto;
+    z-index: 2;
+
+    width: 5.1rem;
+    height: 5.1rem;
+
+    background-color: var(--gray-color);
+
+    @include breakpoint(tablet) {
+      top: 2.5rem;
+      right: 2.5rem;
+
+      width: 4.3rem;
+      height: 4.3rem;
+
+      background-color: #fff;
+    }
+
+    @include breakpoint(small-tablet) {
+      top: 2rem;
+      right: 2rem;
+
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+
+    @include breakpoint(mobile) {
+      top: 1.5rem;
+      right: 1.5rem;
+
+      width: 3.1rem;
+      height: 3.1rem;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      @include breakpoint(mobile) {
+        width: 1.1rem;
+        height: 1.1rem;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-start;
+    gap: 5rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  &__slider-block {
+    width: 100%;
+    max-width: 61.1rem;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+      min-width: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-bottom: 2rem;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__slide {
+    position: relative;
+
+    width: 100%;
+    padding-top: 62.68%;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      height: 45rem;
+      padding-top: 0;
+
+      border-radius: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 30rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 21.3rem;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: scale(1);
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: 1.5s;
+    }
+
+    &.swiper-slide-active {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .slider-navigation {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    width: 100%;
+    max-width: 23.3rem;
+    height: 2.7rem;
+    
+    border-radius: 8.7rem;
+    background-color: #fff;
+
+    &__button {
+      z-index: 2;
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 1rem 3rem;
+      }
+    }
+
+    .js-prev-slide {
+      left: 1.6rem;
+    }
+
+    .js-next-slide {
+      right: 1.6rem;
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 2.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    width: auto;
+
+    font: var(--other-2);
+  }
+
+  &__gallery {
+    @include breakpoint(tablet) {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+  }
+
+  &__gallery-wrapper {
+    transform: none !important;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    max-width: 52rem;
+
+    @include breakpoint(tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__gallery-slide {
+    position: relative;
+
+    width: 100%;
+    padding-top: 100%;
+
+    border: 1px solid transparent;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    &.swiper-slide-thumb-active {
+      border-color: var(--primary-color);
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    max-width: 44.3rem;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+      padding: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2.5rem 2rem 2rem;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 1.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__author-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.9rem;
+    height: 10.9rem;
+    padding: 2.4rem;
+
+    border: 1px solid rgba(28, 28, 28, 0.1);
+    border-radius: 50%;
+
+    @include breakpoint(tablet) {
+      width: 9rem;
+      height: 9rem;
+      padding: 1.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 7rem;
+      height: 7rem;
+      padding: 1.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 6rem;
+      height: 6rem;
+      padding: 1.4rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      border-radius: 50%;
+    }
+  }
+
+  &__author-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    @include breakpoint(mobile) {
+      gap: 0;
+    }
+  }
+
+  &__author-name {
+    font: var(--text-t1);
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__author-resume {
+    font: var(--text-t2);
+    color: rgba(28, 28, 28, 0.3);
+
+    @include breakpoint(mobile) {
+      font: var(--text-t3);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-bottom: 2rem;
+
+    font: var(--text-t1);
+
+    @include breakpoint(tablet) {
+      gap: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 1.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.4rem;
+    }
+  }
+
+  &__product {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 0.8rem 1rem;
+
+    border-radius: 9.2rem;
+    background-color: var(--gray-color);
+
+    @include breakpoint(tablet) {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.2rem;
+    }
+
+    &:hover {
+      svg {
+        transform: rotate(180deg) translateX(-0.5rem);
+      }
+    }
+  }
+
+  &__product-img {
+    width: 6.4rem;
+    height: 6.4rem;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__product-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  &__product-desc {
+    font: var(--text-t2);
+    color: rgba(28, 28, 28, 0.3);
+
+    @include breakpoint(mobile) {
+      font: var(--text-t3);
+    }
+  }
+
+  &__product-link {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    font: var(--text-t1);
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+      font-size: 1.6rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      inset: 0;
+    }
+
+    svg {
+      transform: rotate(180deg);
+
+      width: 1.9rem;
+      height: 1.3rem;
+
+      transition: 0.3s;
+    }
+  }
+}
+
+.modal-feedback {
+  .modal__container {
+    max-width: 69.6rem;
+  }
+
+  .modal__inner {
+    padding: 6rem 6rem 5.2rem;
+    
+    border-radius: 2rem;
+    background-color: #fff;
+
+    @include breakpoint(tablet) {
+      padding: 5.5rem 4.5rem 4.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 5rem 3.5rem 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 4.4rem 2rem 3.2rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  .modal__close {
+    top: 3rem;
+    right: 3rem;
+    left: auto;
+    z-index: 2;
+
+    width: 5.1rem;
+    height: 5.1rem;
+
+    background-color: var(--gray-color);
+
+    @include breakpoint(tablet) {
+      top: 2.5rem;
+      right: 2.5rem;
+
+      width: 4.3rem;
+      height: 4.3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      top: 2rem;
+      right: 2rem;
+
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+
+    @include breakpoint(mobile) {
+      top: 1.5rem;
+      right: 1.5rem;
+
+      width: 3.1rem;
+      height: 3.1rem;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      @include breakpoint(mobile) {
+        width: 1.1rem;
+        height: 1.1rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 4.8rem;
+    font: var(--title-h2);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4.8rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+      gap: 1.2rem;
+    }
+  }
+
+  &__product-img {
+    width: 6.2rem;
+    height: 6.2rem;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include breakpoint(small-tablet) {
+      width: 5.6rem;
+      height: 5.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__product-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  &__product-title {
+    font: var(--title-h4);
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__product-desc {
+    max-width: 31.2rem;
+
+    font: var(--regular) 1.6rem/110% var(--main-ff);
+    color: rgba(28, 28, 28, 0.3);
+
+    @include maxSizeText(2);
+
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__input-wrapper {
+    border-radius: 0.6rem;
+    background-color: var(--gray-color);
+    overflow: hidden;
+
+    &--textarea {
+      grid-column: span 3;
+
+      textarea {
+        min-height: 14.8rem;
+
+        @include breakpoint(mobile) {
+          min-height: 12rem;
+        }
+      }
+
+      label {
+        top: 1.8rem;
+        left: 1.6rem;
+        transform: none;
+
+        &.active {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .parsley-errors-list {
+    right: 0.7rem;
+    font-size: 1.2rem;
+  }
+
+  &__input {
+    display: flex;
+    align-items: flex-end;
+    height: 5.2rem;
+    padding: 1rem 1.6rem;
+
+    border-bottom: 0;
+
+    font: var(--text-t2);
+  }
+
+  & .modal-feedback__label {
+    left: 1.6rem;
+
+    color: #BBBBBB;
+  }
+
+  &__textarea {
+    padding: 1.8rem 1.6rem;
+    border-bottom: 0;
+  }
+
+  .files {
+    margin-bottom: 4.8rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__button {
+    height: 5.2rem;
+    margin-bottom: 1.2rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__confidence {
+    max-width: 40rem;
+    align-self: center;
+
+    font: var(--text-t3);
+    text-align: center;
+    color: rgba(28, 28, 28, 0.3);
+
+    @include breakpoint(mobile) {
+      font: var(--text-t4);
+    }
+
+    a {
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--black-color);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.modal-answer {
+  .modal__container {
+    max-width: 47rem;
+  }
+
+  .modal__inner {
+    padding: 5.2rem 4.3rem;
+    border-radius: 2rem;
+
+    @include breakpoint(mobile) {
+      padding: 4.8rem 3.2rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+
+    font: var(--title-h2);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.6rem;
+      font-size: 3.6rem;
+    }
+
+    @media (max-width: 350px) {
+      font: var(--title-h2);
+    }
+  }
+
+  &__desc {
+    max-width: 30.8rem;
+    margin-bottom: 4.5rem;
+
+    font: var(--text-t2);
+    text-align: center;
+    color: #BBBBBB;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 5.2rem;
+  }
+}
+
+.modal-answer-review {
+  .modal__container {
+    max-width: 69.6rem;
+  }
+
+  .modal__inner {
+    padding: 6rem;
+    border-radius: 2rem;
+
+    @include breakpoint(tablet) {
+      padding: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 4rem 2.4rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  .modal__close {
+    top: 3rem;
+    right: 3rem;
+    left: auto;
+    z-index: 2;
+
+    width: 5.1rem;
+    height: 5.1rem;
+
+    background-color: var(--gray-color);
+
+    @include breakpoint(tablet) {
+      top: 2.5rem;
+      right: 2.5rem;
+
+      width: 4.3rem;
+      height: 4.3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      top: 2rem;
+      right: 2rem;
+
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+
+    @include breakpoint(mobile) {
+      top: 1.5rem;
+      right: 1.5rem;
+
+      width: 3.1rem;
+      height: 3.1rem;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      @include breakpoint(mobile) {
+        width: 1.1rem;
+        height: 1.1rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+
+    font: var(--title-h2);
+  }
+
+  &__desc {
+    margin-bottom: 3.6rem;
+
+    font: var(--text-t2);
+    color: #BBBBBB;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 5.2rem;
+  }
+}
+
+.modal-present {
+  .modal__container {
+    max-width: 47rem;
+  }
+
+  .modal__inner {
+    padding: 3.2rem 3.2rem 6rem;
+
+    border-radius: 2rem;
+    background-color: #fff;
+
+    @include breakpoint(mobile) {
+      padding: 1.6rem 1.6rem 3.4rem;
+
+      border-radius: 1.4rem;
+    }
+  }
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__condition {
+    display: flex;
+    align-items: center;
+    height: 2.4rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+
+    background-color: var(--gray-color);
+    border-radius: 11.2rem;
+
+    font: var(--text-t3);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.4rem;
+    }
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+    
+    font: var(--title-h2);
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 3rem;
+
+    font: var(--text-t2);
+    text-align: center;
+    color: #bbbbbb;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__product-img {
+    width: 8.8rem;
+    height: 8.8rem;
+    margin-bottom: 1.6rem;
+
+    border-radius: 50%;
+    background-color: #EAE6E3;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: darken;
+    }
+  }
+
+  &__product-title {
+    margin-bottom: 0.2rem;
+
+    font: var(--title-h4);
+    text-align: center;
+  }
+
+  &__product-desc {
+    font: var(--regular) 1.6rem/110% var(--main-ff);
+    text-align: center;
+    color: #bbbbbb;
+  }
+
+  &__button {
+    height: 5.2rem;
+    width: 100%;
+    max-width: 35rem;
+
+    @include breakpoint(mobile) {
+      height: 4.8rem;
+    }
+  }
+}
+
+.modal-success-click {
+  .modal__container {
+    max-width: 49.4rem;
+  }
+
+  .modal__inner {
+    padding: 5.2rem 3rem;
+
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+
+    color: #fff;
+
+    @include breakpoint(mobile) {
+      padding: 4.8rem 2rem;
+    }
+  }
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+    font: var(--title-h2);
+
+    @include breakpoint(mobile) {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 3.6rem;
+
+    font: var(--text-t2);
+  }
+
+  &__link {
+    width: 100%;
+    max-width: 27.7rem;
+    height: 5.2rem;
+
+    font: var(--text-t2);
+  }
+}

@@ -1,0 +1,250 @@
+@import '../../node_modules/swiper/swiper-bundle';
+@import '../../node_modules/choices.js/public/assets/styles/choices';
+@import "../../node_modules/nouislider/dist/nouislider";
+@import '../../node_modules/air-datepicker/air-datepicker';
+@import "../../node_modules/@fancyapps/ui/dist/fancybox";
+@import "../../node_modules/dropzone/dist/basic";
+
+.swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dz-message {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 1rem;
+    background-color: var(--gray-color);
+    overflow: hidden;
+
+    font-size: 0;
+
+    &.hide {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding-top: 100%;
+
+        &:first-child:last-child {
+            grid-column: span 2;
+        }
+    }
+}
+
+.dz-button {
+    position: static;
+
+    width: 6rem;
+    height: 6rem;
+
+    background: url("../img/icons/file-add-icon.svg") no-repeat center;
+    background-size: contain;
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        inset: 0;
+    }
+}
+
+.dropzone {
+    .dz-preview {
+        width: auto;
+        margin: 0;
+    }
+
+    .dz-image {
+        position: relative;
+
+        width: 10rem;
+        height: 10rem;
+
+        border-radius: 1rem;
+        background-color: var(--gray-color);
+        overflow: hidden;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            padding-top: 100%;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .dz-remove {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 4rem;
+        height: 4rem;
+
+        border-radius: 50%;
+        background: #fff url("../img/icons/close-icon.svg") no-repeat center;
+        background-size: 1.2rem;
+
+        font-size: 0;
+    }
+}
+
+.dz-error-message, .dz-size, .dz-filename, .dz-progress, .dz-error-mark, .dz-success-mark {
+    display: none !important;
+}
+
+.swiper-button-lock {
+    display: none !important;
+}
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+
+    font: var(--text-t3);
+    color: var(--black-color);
+}
+
+.swiper-button-disabled {
+    color: rgba(28, 28, 28, 0.7);
+}
+
+.parsley-errors-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 1.4rem;
+    color: var(--system-color);
+}
+
+.choices {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0;
+
+    font: var(--text-t2);
+
+
+
+    &[data-type*=select-one] {
+        &::after {
+            position: static;
+
+            width: 1.35rem;
+            height: 1.75rem;
+            margin-top: 0;
+
+            border: 0;
+            background: url("../img/icons/arrow-down-icon.svg") no-repeat center;
+            background-size: cover;
+        }
+
+        &.is-open::after {
+            margin-top: 0;
+        }
+
+        .choices__inner {
+            padding: 0;
+        }
+    }
+
+    &__inner {
+        min-height: auto;
+        padding: 0;
+
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+
+        font-size: var(--text-t2);
+    }
+
+    &__list {
+        &--single {
+            padding: 0;
+        }
+    }
+
+    &__placeholder {
+        opacity: 1;
+    }
+}
+
+.noUi-target {
+    border: 0;
+    border-radius: 4rem;
+    background-color: #E6E6E6;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.noUi-horizontal {
+    height: 0.4rem;
+}
+
+.noUi-connects {
+    border-radius: 4rem;
+}
+
+.noUi-connect {
+    background-color: var(--primary-color);
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 12px;
+    height: 12px;
+    right: -8px;
+    top: -4.5px;
+}
+
+.noUi-handle {
+    border: 0;
+    border-radius: 50%;
+    background: var(--primary-color) url("../img/icons/star-white-icon.svg") no-repeat center;
+    background-size: 8px 8px;
+    box-shadow: none;
+    cursor: pointer;
+
+    &::after, &::before {
+        display: none;
+    }
+}

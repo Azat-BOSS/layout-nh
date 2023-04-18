@@ -1,0 +1,25 @@
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9.2rem 2rem;
+
+  opacity: 0;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8rem 2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6.4rem 2rem;
+  }
+
+  @include breakpoint(mobile) {
+    gap: 4.4rem 2rem;
+  }
+
+  @include breakpoint(small-mobile) {
+    grid-template-columns: 1fr;
+  }
+}

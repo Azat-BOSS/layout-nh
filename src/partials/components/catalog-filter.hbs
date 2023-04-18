@@ -1,0 +1,135 @@
+<div class="catalog-filter js-section-animate">
+    <div class="catalog-filter__count-block">
+        <span class="catalog-filter__count">310</span>
+        <span class="catalog-filter__count-desc">Найдено товаров</span>
+    </div>
+    <a class="catalog-filter__open-button" href="#filter">
+        <svg>
+            <use xlink:href="#filter-icon"></use>
+        </svg>
+        <span>Фильтр</span>
+    </a>
+    <form class="catalog-filter__form js-filter-form" action="#">
+        <div class="catalog-filter__form-top">
+            <button class="catalog-filter__button visually-hidden js-filter-reset" type="reset">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+                <span>Сбросить фильтр</span>
+            </button>
+        </div>
+        <div class="catalog-filter__form-bottom">
+            <div class="catalog-filter__select js-multi-select">
+                                    <span class="catalog-filter__select-count-block js-multi-select-count-block">
+                                        Выбрано&nbsp;<span class="js-multi-select-count">0</span>
+                                    </span>
+                <div class="catalog-filter__select-header js-multi-select-header">
+                    <span>Сортировать</span>
+                    <svg>
+                        <use xlink:href="#arrow-down-icon"></use>
+                    </svg>
+                </div>
+                <div class="catalog-filter__select-dropdown">
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogSort1" id="catalogSort1" type="checkbox">
+                        <label class="catalog-filter__select-label" for="catalogSort1">Новинки</label>
+                    </div>
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogSort3" id="catalogSort2" type="checkbox">
+                        <label class="catalog-filter__select-label" for="catalogSort2">Всегда пригодиться</label>
+                    </div>
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogSort3" id="catalogSort3" type="checkbox">
+                        <label class="catalog-filter__select-label" for="catalogSort3">Хит продаж</label>
+                    </div>
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogSort4" id="catalogSort4" type="checkbox">
+                        <label class="catalog-filter__select-label" for="catalogSort4">Скидка месяца</label>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-filter__select js-multi-select">
+                                    <span class="catalog-filter__select-count-block js-multi-select-count-block">
+                                        Выбрано&nbsp;<span class="js-multi-select-count">0</span>
+                                    </span>
+                <div class="catalog-filter__select-header js-multi-select-header">
+                    <span>Сортировать</span>
+                    <svg>
+                        <use xlink:href="#arrow-down-icon"></use>
+                    </svg>
+                </div>
+                <div class="catalog-filter__select-dropdown">
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogRadio" id="catalogSortRadio1" type="radio">
+                        <label class="catalog-filter__select-label" for="catalogSortRadio1">Не сортировать</label>
+                    </div>
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogRadio" id="catalogSortRadio2" type="radio">
+                        <label class="catalog-filter__select-label" for="catalogSortRadio2">По убыванию</label>
+                    </div>
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogRadio" id="catalogSortRadio3" type="radio">
+                        <label class="catalog-filter__select-label" for="catalogSortRadio3">По возрастанию</label>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-filter__select js-multi-select">
+                                    <span class="catalog-filter__select-count-block js-multi-select-count-block">
+                                        Выбрано&nbsp;<span class="js-multi-select-count">0</span>
+                                    </span>
+                <div class="catalog-filter__select-header js-multi-select-header">
+                    <span>Наличие товара</span>
+                    <svg>
+                        <use xlink:href="#arrow-down-icon"></use>
+                    </svg>
+                </div>
+                <div class="catalog-filter__select-dropdown">
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogHave1" id="catalogHave1" type="checkbox">
+                        <label class="catalog-filter__select-label" for="catalogHave1">Новинки</label>
+                    </div>
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogHave3" id="catalogHave2" type="checkbox">
+                        <label class="catalog-filter__select-label" for="catalogHave2">Всегда пригодиться</label>
+                    </div>
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogHave3" id="catalogHave3" type="checkbox">
+                        <label class="catalog-filter__select-label" for="catalogHave3">Хит продаж</label>
+                    </div>
+                    <div class="catalog-filter__select-checkbox-wrapper">
+                        <input class="catalog-filter__select-checkbox visually-hidden checkbox" name="catalogHave4" id="catalogHave4" type="checkbox">
+                        <label class="catalog-filter__select-label" for="catalogHave4">Скидка месяца</label>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-filter__price js-price-container">
+                <span class="catalog-filter__price-desc">Цена:</span>
+                <div class="catalog-filter__price-range-wrapper">
+                    <div class="catalog-filter__price-input-wrapper">
+                        <input class="catalog-filter__price-input js-filter-price price-0" min="2800" max="39999" type="number" name="catalogPriceStart" value="2800" data-start-value="2800">
+                        <span>₽</span>
+                    </div>
+                    <div class="catalog-filter__price-range js-price-range" data-min="2800" data-max="39999" data-start-value="8000,30000"></div>
+                    <div class="catalog-filter__price-input-wrapper">
+                        <input class="catalog-filter__price-input js-filter-price price-1" min="2800" max="39999" type="number" name="catalogPriceEnd" value="39999" data-start-value="39999">
+                        <span>₽</span>
+                    </div>
+                </div>
+            </div>
+            <div class="switch">
+                <input class="switch__checkbox visually-hidden" checked name="catalogPromotion" id="catalogPromotion" type="checkbox">
+                <label class="switch__label" for="catalogPromotion">
+                    <span>Товары по акции</span>
+                    <span class="switch__label-switch"></span>
+                </label>
+            </div>
+            <div class="switch">
+                <input class="switch__checkbox visually-hidden" checked name="catalogPresent" id="catalogPresent" type="checkbox">
+                <label class="switch__label" for="catalogPresent">
+                    <span>Товары с подарками</span>
+                    <span class="switch__label-switch"></span>
+                </label>
+            </div>
+        </div>
+    </form>
+</div>

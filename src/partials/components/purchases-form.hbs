@@ -1,0 +1,79 @@
+<section class="purchases js-section-animate">
+    <div class="purchases__container">
+        <h2 class="purchases__title">Оптовые закупки</h2>
+        <div class="purchases__main">
+            <div class="purchases__block">
+                <p class="purchases__text">
+                    Уважаемые дистрибьюторы и партнеры! Сотрудничество с нами — верный путь к успеху и процветанию вашего бизнеса! <br/><br/> Предлагаем Вам заполнить форму, для начала нашего с Вами долгосрочного и взаимовыгодного сотрудничества!
+                </p>
+                <img src="../../img/purchasesImage.webp" alt="image" class="purchases__image">
+            </div>
+            <form action="" method="" data-need-validation="true" class="purchases__form">
+                <h4 class="purchases__form-title">Ваши данные</h4>
+                <ul class="purchases__ul radio-input-type">
+                    <li class="purchases__li">
+                        <input type="radio" id="individual" class="purchases__radio-input" name="radiobtn" value="Физ-лицо" data-parsley-required="true" required="">
+                        <label for="individual" class="purchases__radio-input__label">Физ-лицо</label>
+                    </li>
+                    <li class="purchases__li">
+                        <input type="radio" id="entrepreneur" class="purchases__radio-input" name="radiobtn" value="ИП" data-parsley-required="true" required="">
+                        <label for="entrepreneur" class="purchases__radio-input__label">ИП</label>
+                    </li>
+                    <li class="purchases__li">
+                        <input type="radio" id="OOO" class="purchases__radio-input" name="radiobtn" value="ООО" data-parsley-required="true" required="">
+                        <label for="OOO" class="purchases__radio-input__label">ООО</label>
+                    </li>
+                </ul>
+                <ul class="purchases__ul input-block">
+                    <li class="purchases__li-input">
+                        <input type="text" class="purchases__input" id="FIO" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim"
+                               required>
+                        <label class="purchases__input__label" for="FIO">ФИО</label>
+                    </li>
+                    <li class="purchases__li-input">
+                        <input type="phone" class="purchases__input js-phone-mask" id="input-phone" data-parsley-whitespace="trim"
+                               required>
+                        <label class="purchases__input__label" for="input-phone">Телефон</label>
+                    </li>
+                    <li class="purchases__li-input">
+                        <input type="email" class="purchases__input" id="mail" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim"
+                               required>
+                        <label class="purchases__input__label" for="mail">E-mail</label>
+                    </li>
+                    <li class="purchases__li-input">
+                        <input type="text" class="purchases__input" id="city" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim"
+                               required>
+                        <label class="purchases__input__label" for="feedbaccitykName">Город</label>
+                    </li>
+                </ul>
+                <h4 class="purchases__form-title">Планируемая сумма заказа</h4>
+                <ul class="purchases__ul radio-cost-block">
+                    <li class="purchases__li">
+                        <input type="radio" id="50" class="purchases__radio-input" name="radiobtncost" value="до 50 тыс/₽" required>
+                        <label for="50" class="purchases__radio-input__label">до 50 тыс/₽</label>
+                    </li>
+                    <li class="purchases__li">
+                        <input type="radio" id="150" class="purchases__radio-input" name="radiobtncost" value="до 150 тыс/₽" required>
+                        <label for="150" class="purchases__radio-input__label">до 150 тыс/₽</label>
+                    </li>
+                    <li class="purchases__li">
+                        <input type="radio" id="300" class="purchases__radio-input" name="radiobtncost" value="от 300 тыс/₽" required>
+                        <label for="300" class="purchases__radio-input__label">от 300 тыс/₽</label>
+                    </li>
+                    <li class="purchases__li">
+                        <input type="radio" id="1m" class="purchases__radio-input" name="radiobtncost" value="от 1 млн/₽" required>
+                        <label for="1m" class="purchases__radio-input__label">от 1 млн/₽</label>
+                    </li>
+                </ul>
+                <h4 class="purchases__form-title">Сфера деятельности</h4>
+                <ul class="purchases__ul input-block">
+                    <li class="purchases__li-input">
+                        <input type="text" class="purchases__input" id="FIO" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" data-parsley-whitespace="trim"
+                               required>
+                        <label class="purchases__input__label" for="FIO">Описание</label>
+                </ul>
+                <button class="purchases__form-btn" type="submit">Получить образцы</button>
+            </form>
+        </div>
+    </div>
+</section>

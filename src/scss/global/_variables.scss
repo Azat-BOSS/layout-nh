@@ -1,0 +1,90 @@
+:root {
+  /* Colors */
+  --primary-color: #007D75;
+  --secondary-color: #00766E;
+  --system-color: #E94545;
+  --black-color: #1C1C1C;
+  --gray-color: #F7F7F7;
+
+  /* Layout containers */
+  --max-text-container-width: 87.8rem;
+  --max-wide-text-container-width: 144rem;
+  --max-container-width: 152rem;
+  --content-padding: 4rem;
+
+  /* Font Family */
+  --main-ff: 'Futura PT', sans-serif;
+
+  /* Font Weight */
+  --regular: 400;
+  --semibold: 600;
+
+  /* Text */
+  --text-t1: var(--regular) 2rem/110% var(--main-ff);
+  --text-t2: var(--regular) 1.8rem/100% var(--main-ff);
+  --text-t3: var(--regular) 1.4rem/100% var(--main-ff);
+  --text-t4: var(--regular) 1.2rem/100% var(--main-ff);
+
+  /* Titles */
+  --title-h0: var(--regular) 11.2rem/90% var(--main-ff);
+  --title-h1: var(--regular) 7.2rem/90% var(--main-ff);
+  --title-h2: var(--regular) 4.8rem/90% var(--main-ff);
+  --title-h3: var(--regular) 3.2rem/80% var(--main-ff);
+  --title-h3-lh: var(--regular) 3.2rem/110% var(--main-ff);
+  --title-h4: var(--regular) 2.4rem/100% var(--main-ff);
+
+  /* Other Typography */
+  --other: var(--regular) 1.4rem/100% var(--main-ff);
+  --other-2: var(--regular) 1.1rem/100% var(--main-ff);
+}
+
+@include breakpoint(tablet) {
+  :root {
+    /* Layout containers */
+    --content-padding: 3rem;
+
+    /* Text */
+    --text-t1: var(--regular) 1.8rem/110% var(--main-ff);
+
+    /* Titles */
+    --title-h0: var(--regular) 7rem/90% var(--main-ff);
+    --title-h1: var(--regular) 5rem/90% var(--main-ff);
+    --title-h2: var(--regular) 4rem/90% var(--main-ff);
+    --title-h3: var(--regular) 2.8rem/80% var(--main-ff);
+    --title-h3-lh: var(--regular) 2.8em/110% var(--main-ff);
+    --title-h4: var(--regular) 2.2rem/100% var(--main-ff);
+
+    /* Other Typography */
+    --other: var(--regular) 1.2rem/100% var(--main-ff);
+  }
+}
+
+@include breakpoint(mobile) {
+  :root {
+    /* Layout containers */
+    --content-padding: 1.6rem;
+
+    /* Text */
+    --text-t1: var(--regular) 1.6rem/110% var(--main-ff);
+
+    /* Titles */
+    --title-h0: var(--regular) 4.4rem/90% var(--main-ff);
+    --title-h1: var(--regular) 3.6rem/90% var(--main-ff);
+    --title-h2: var(--regular) 3rem/90% var(--main-ff);
+    --title-h3: var(--regular) 2.4rem/80% var(--main-ff);
+    --title-h3-lh: var(--regular) 2.4em/110% var(--main-ff);
+    --title-h4: var(--regular) 2rem/100% var(--main-ff);
+
+    /* Other Typography */
+    --other: var(--regular) 1rem/100% var(--main-ff);
+  }
+}
+
+$minWidth: 375;
+$maxWidth: 1600; // Ширина макета
+$base-transition-time: 0.3s;
+$base-transition-easing: ease;
+
+$overlay-color: rgba(0, 0, 0, 0.5);
+
+$modal-bg-color: white;

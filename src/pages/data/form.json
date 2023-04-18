@@ -1,0 +1,47 @@
+{
+  "pressFilter": [
+    {
+      "id": "pressNews",
+      "text": "Новости",
+      "checked": true
+    },
+    {
+      "id": "pressMedia",
+      "text": "СМИ о нас"
+    },
+    {
+      "id": "pressBlog",
+      "text": "Блог о здоровье"
+    }
+  ],
+  "news": [
+    {
+      "img": "img/news-section-1.jpg",
+      "imgWebp": "img/news-section-1.webp",
+      "time": "20 июня",
+      "title": "Natural Health - генеральный партнер \"Ночной Казани 2022\".",
+      "text": "16 июля прошел забег \"Ночная Казань\". Natural Health является главным спонсором данного мероприятия. Подробнее: https://m.business-gazeta.ru/article/557357"
+    },
+    {
+      "img": "img/news-section-2.jpg",
+      "imgWebp": "img/news-section-2.webp",
+      "time": "11 июня",
+      "title": "23 июля состоится пятилетие Natural Health",
+      "text": "23 июля состоится грандиозное событие -  компания Natural Health отмечает 5-летие со дня своего основания..."
+    },
+    {
+      "img": "img/news-section-3.jpg",
+      "imgWebp": "img/news-section-3.webp",
+      "time": "02 июня",
+      "title": "Панельная дискуссия «Поиск новых возможностей и трансформация компаний»",
+      "text": "С 3 по 4 июня на территории самого современного города России - Иннополиса проходит панельная дискуссия с представителями компаний «Поиск новых возможностей..."
+    },
+    {
+      "img": "img/news-section-4.jpg",
+      "imgWebp": "img/news-section-4.webp",
+      "time": "20 июня",
+      "title": "Natural Health - генеральный партнер \"Ночной Казани 2022\".",
+      "text": "16 июля прошел забег \"Ночная Казань\". Natural Health является главным спонсором данного мероприятия. Подробнее: https://m.business-gazeta.ru/article/557357"
+    }
+  ]
+}

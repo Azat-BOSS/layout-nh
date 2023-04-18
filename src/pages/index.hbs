@@ -1,0 +1,229 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <h1 class="visually-hidden">
+            Компания Natural Health - первая компания-производитель в России,
+            разработавшая энергоинформационное направление, которому нет аналогов в мире.
+        </h1>
+        <section class="intro js-section-animate">
+            <div class="container">
+                <div class="intro__slider swiper">
+                    <div class="swiper-wrapper">
+                        {{#each intro }}
+                            <div class="intro__slide swiper-slide">
+                                <div class="intro__img">
+                                    <picture>
+                                        <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото">
+                                    </picture>
+                                    <div class="intro__img-desc-block">
+                                        <div class="intro__img-desc-img">
+                                            <picture>
+                                                <source srcset="{{this.imgWebp}}" media="(max-width: 640px)" type="image/webp">
+                                                <source srcset="{{this.img}}" media="(max-width: 640px)">
+                                                <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                                <img class="lazyload" data-src="{{this.img}}" alt="Фото">
+                                            </picture>
+                                        </div>
+                                        <div class="intro__img-desc-content">
+                                            <div class="intro__img-desc-top">
+                                                <h3 class="intro__img-desc-title">BioPit</h3>
+                                                <span class="intro__img-desc-price">3 990 ₽</span>
+                                            </div>
+                                            <span class="intro__img-desc">природный коллаген</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="intro__content" style="background-color: {{this.bgc}}">
+                                    <img class="intro__round-img lazyload" data-src="img/round-text.png" alt="Natural Health">
+                                    <h2 class="intro__title">Кремниевый комплекс в подарок при покупке 2-х штук
+                                        Biopit</h2>
+                                    <div class="intro__text">
+                                        <p>Только на нашем официальном сайте 3&nbsp;—&nbsp;26 января</p>
+                                    </div>
+                                    <a class="intro__link button button--bordered" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                    {{> slider-navigation }}
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="features js-section-animate">
+            <div class="container">
+                <div class="features__slider swiper">
+                    <div class="swiper-wrapper">
+                        {{#each features }}
+                            <div class="features__slide swiper-slide">{{this.text}}</div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="categories">
+            <div class="container">
+                <div class="categories__title-wrapper">
+                    <h2 class="categories__title js-title-animate">Категории</h2>
+                </div>
+                <ul class="categories__list js-section-animate">
+                    {{#each categories }}
+                        <li class="categories__item">
+                            <a class="categories__item-link tag" href="catalog.html">
+                                <svg>
+                                    <use xlink:href="#{{this.img}}"></use>
+                                </svg>
+                                <span>{{this.text}}</span>
+                            </a>
+                        </li>
+                    {{/each}}
+                    <li class="categories__more-button-block">
+                        <a class="categories__more-button button button--bordered" href="catalog.html">Смотреть все</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="lines js-section-animate">
+            <div class="container">
+                <div class="lines__inner">
+                    <span class="lines__desc">Natural Health Corporation</span>
+                    <h2 class="lines__title">Линейки.<span>&nbsp;Подбери необходимый формат сам</span></h2>
+                    <ul class="lines__list">
+                        {{#each lines }}
+                            <li class="lines__item">
+                                <a class="lines__item-link" href="product.html">
+                                    <div class="lines__item-img">
+                                        <picture>
+                                            <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото товара">
+                                        </picture>
+                                    </div>
+                                    <h3 class="lines__item-title">{{this.title}}</h3>
+                                    <p class="lines__item-text">
+                                        {{this.text}}
+                                    </p>
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="popular">
+            <div class="container">
+                <span class="popular__company-name">Natural Health Corporation</span>
+                <div class="popular__title-wrapper">
+                    <h2 class="popular__title js-title-animate">Популярные товары</h2>
+                </div>
+                {{> catalog-list data=popular }}
+            </div>
+        </section>
+        <section class="invitation">
+            <div class="container">
+                {{> lead-slider data=invitation1 dataNavigation=invitationNavigation1 }}
+            </div>
+            <div class="container">
+                {{> lead-slider data=invitation2 dataNavigation=invitationNavigation2 mod='lead-slider--reverse' }}
+            </div>
+        </section>
+        <section class="about-section js-section-animate">
+            <div class="container">
+                <div class="about-section__inner lazyload" data-bg="img/about-section-bg.jpg" style="background-repeat: no-repeat; background-position: center; background-size: cover;">
+                    <div class="about-section__top lazyload" data-bg="img/about-section-mobile-bg.jpg" style="background-repeat: no-repeat; background-position: center; background-size: cover;">
+                        <h2 class="about-section__title">Natural Health</h2>
+                        <a class="about-section__video-link" data-src="https://youtu.be/Fcc0VRy19VM" data-fancybox href="#">
+                            <div class="about-section__video-img">
+                                <svg>
+                                    <use xlink:href="#play-icon"></use>
+                                </svg>
+                            </div>
+                            <span class="about-section__video-desc">Смотреть видео о компании</span>
+                        </a>
+                    </div>
+                    <div class="about-section__content">
+                        <div class="about-section__text">
+                            <p>
+                                Компания Natural Health - первая в России компания-производитель, разработавшая
+                                энергоинформационное направление, которому нет аналогов в мире.
+                            </p>
+                            <p>
+
+                                На официальном сайте компании “Натуральное здоровье” представлен каталог нашей
+                                продукции. Каждый продукт изготовлен из безопасных и качественных натуральных
+                                компонентов, под постоянным и четким контролем соблюдения алгоритмов и технологий
+                                производства. Высокотехнологичные продукты для здоровья и красоты разрабатывают
+                                высококвалифицированные специалисты.
+                            </p>
+                            <p>
+                                Энергоинформационные продукты созданы по особым технологиям. В отличие от классических
+                                лекарственных препаратов энергоинформационные продукты работают на молекулярном уровне:
+                                передают структурированную информацию здоровых клеток поврежденным и оздоравливают их.
+                                Энергоинформационные препараты омолаживают, оздоравливают и восстанавливают организм, не
+                                вызывая побочных действий и оказывая максимум пользы для здоровья.
+                            </p>
+                        </div>
+                        <button class="about-section__more-button">Читать полностью</button>
+                        <a class="about-section__link button button--white" href="about.html">Подробнее о компании</a>
+                    </div>
+                    <blockquote class="about-section__director">
+                        <picture>
+                            <source data-srcset="img/director.webp" type="image/webp">
+                            <img class="about-section__director-img lazyload" data-src="img/director.png" alt="Директор компании">
+                        </picture>
+                        <cite class="about-section__director-name">Патраков Сергей Анатольевич</cite>
+                        <span class="about-section__director-position">Собственник и генеральный директор компании Natural Health</span>
+                        <div class="about-section__director-text">
+                            <p>
+                                Идите уверенно по направлению к мечте. Живите той жизнью, которую вы сами себе придумали.
+                            </p>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        {{> reviews-section }}
+        <section class="news-section">
+            <div class="container">
+                <div class="news-section__title-wrapper">
+                    <h2 class="news-section__title js-title-animate">Пресс-центр</h2>
+                </div>
+                <header class="news-section__header">
+                    <div class="news-section__filter">
+                        {{> press-filter data=pressFilter }}
+                    </div>
+                    <a class="news-section__link button button--bordered js-section-animate" href="news.html">Смотреть все</a>
+                </header>
+                {{> news-list data=news }}
+                <a class="news-section__tablet-link button button--bordered" href="news.html">Смотреть все</a>
+            </div>
+        </section>
+        <section class="awards js-section-animate">
+            <div class="container">
+                <div class="awards__inner">
+                    <h2 class="awards__title">награды</h2>
+                    <p class="awards__desc">Следим за качеством <span>&nbsp;и регулярно побеждаем в конкурсах</span></p>
+                    <div class="awards__slider swiper">
+                        <ul class="awards__list swiper-wrapper">
+                            {{#each awards }}
+                                <li class="awards__item swiper-slide">
+                                    <div class="awards__item-img-block">
+                                        <div class="awards__item-img">
+                                            <picture>
+                                                <source data-srcset="{{this.imgWebp}}" type="image/webp">
+                                                <img class="lazyload" data-fancybox="awards" data-src="{{this.img}}" alt="Фото награды">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <h3 class="awards__item-title">{{this.title}}</h3>
+                                    <time class="awards__item-date">{{this.time}}</time>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}
